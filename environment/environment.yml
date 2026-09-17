@@ -1,0 +1,27 @@
+name: planthop
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - anndata=0.13.3
+  - numpy=2.5.3
+  - pandas=3.0.5
+  - scipy=1.18
+  - scikit-learn
+  - scanpy
+  - h5py
+  - openpyxl
+  - requests
+  - biopython
+  - matplotlib
+  - r-base=4.4
+  - r-seurat
+  - r-seuratobject
+  - r-data.table
+  - r-jsonlite
+  - r-matrix
+  - orthofinder=3.1.5
+  - famsa
+  - fasttree
+

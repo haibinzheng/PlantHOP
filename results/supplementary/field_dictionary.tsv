@@ -1,0 +1,104 @@
+table	field	data_type	description	unit_or_allowed_values	missing_value_policy
+Table_S1	dataset_id	text	Dataset id.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	species	text	Species.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	tissue	text	Tissue.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	tissue_status	text	Tissue status.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	label_column	text	Label column.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	cells	numeric	Cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	labeled_cells	numeric	Labeled cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	unknown_cells	numeric	Unknown cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	unknown_fraction	numeric	Unknown fraction.	fraction	Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	readable	text	Readable.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	integrity_status	text	Integrity status.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	root_panel_status	text	Root panel status.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	root_accepted	text	Root accepted.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	root_reason	text	Root reason.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	root_candidate_label_count	text	Root candidate label count.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	root_labels_ge_100_cells	text	Root labels ge 100 cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	root_candidate_cells	text	Root candidate cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	leaf_panel_status	text	Leaf panel status.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	leaf_accepted	text	Leaf accepted.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	leaf_reason	text	Leaf reason.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	leaf_candidate_label_count	text	Leaf candidate label count.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	leaf_labels_ge_100_cells	text	Leaf labels ge 100 cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	leaf_candidate_cells	text	Leaf candidate cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	vascular_panel_status	text	Vascular panel status.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	vascular_accepted	text	Vascular accepted.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	vascular_reason	text	Vascular reason.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	vascular_candidate_label_count	text	Vascular candidate label count.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	vascular_labels_ge_100_cells	text	Vascular labels ge 100 cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	vascular_candidate_cells	text	Vascular candidate cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	source_path	text	Absolute authoritative source path(s), semicolon-delimited when multiple.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	source_sha256	text	SHA256 digest(s) corresponding positionally to source_path.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	authority_version	text	Frozen authority version recorded by manuscript_evidence_v1.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	direct_source_object_path	text	Absolute path to the individual source object when present in frozen evidence.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	direct_source_object_sha256	text	SHA256 of the individual source object when present in frozen evidence.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	gap_flags	text	Semicolon-delimited evidence gaps; blank means no table-specific gap was detected.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	frozen_rank	numeric	Frozen rank.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	orthogroup_id	text	Orthogroup id.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	mapped_in_all_three_validation_species	text	Mapped in all three validation species.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	program_mapping_coverage_numerator	numeric	Program mapping coverage numerator.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	program_mapping_coverage_denominator	numeric	Program mapping coverage denominator.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	program_mapping_coverage_fraction	numeric	Program mapping coverage fraction.	fraction	Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	arabidopsis_members	text	Arabidopsis members.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	esa_members	text	Esa members.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	sir_members	text	Sir members.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	spa_members	text	Spa members.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	single_gene_representatives	text	Single gene representatives.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	annotation_class	text	Xylem-specific boundary: annotation_available or mapping_only; legacy cross-program A/B tiers are not transferred.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	function_symbols	text	Function symbols.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	function_descriptions	text	Function descriptions.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	annotation_member_genes	text	Annotation member genes.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	annotation_sources	text	Annotation sources.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	annotation_scope	text	Annotation scope.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	source_path	text	Absolute authoritative source path(s), semicolon-delimited when multiple.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	source_sha256	text	SHA256 digest(s) corresponding positionally to source_path.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	authority_version	text	Frozen authority version recorded by manuscript_evidence_v1.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	gap_flags	text	Semicolon-delimited evidence gaps; blank means no table-specific gap was detected.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	record_id	text	Record id.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	validation_stage	text	Validation stage.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	source_table	text	Source table.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	species	text	Species.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	cohort	text	Cohort.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	contrast_id	text	Contrast id.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	panel	text	Panel.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	coarse_label	text	Coarse label.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	role	text	Role.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	endpoint_status	text	Endpoint status.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	eligibility	text	Prospective endpoint eligibility before scoring.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	record_scope	text	pooled or replicate-level scope; R1/R2 are replicate identifiers in the controls table.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	replicate	text	Replicate.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	record_type	text	Record type.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	comparator	text	Comparator.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	estimand	text	Estimand.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	mapped_orthogroups	numeric	Mapped orthogroups.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	positive_cells	numeric	Positive cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	negative_cells	numeric	Negative cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	auroc	numeric	Auroc.	fraction	Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	auroc_lower_95	numeric	Auroc lower 95.	fraction	Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	auroc_upper_95	numeric	Auroc upper 95.	fraction	Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	average_precision	numeric	Average precision.	fraction	Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	ap_lower_95	numeric	Ap lower 95.	fraction	Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	ap_upper_95	numeric	Ap upper 95.	fraction	Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	smd	numeric	Smd.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	smd_lower_95	numeric	Smd lower 95.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	smd_upper_95	numeric	Smd upper 95.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	empirical_p	numeric	Empirical p.	fraction	Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	positive_replicate_directions	numeric	Positive replicate directions.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	required_positive_replicate_directions	numeric	Required positive replicate directions.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	single_gene_auroc	numeric	Single gene auroc.	fraction	Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	family_minus_single_auroc	numeric	Family minus single auroc.	fraction	Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	estimate	numeric	Estimate.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	lower_95	numeric	Lower 95.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	upper_95	numeric	Upper 95.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	interval_type	text	Interval type.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	bootstrap_n	numeric	Bootstrap n.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	random_programs	numeric	Random programs.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	random_auc_median	numeric	Random auc median.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	random_auc_q95	numeric	Random auc q95.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	exclusion_reason	text	Frozen reason an endpoint was excluded before scoring.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	note	text	Note.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	source_path	text	Absolute authoritative source path(s), semicolon-delimited when multiple.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	source_sha256	text	SHA256 digest(s) corresponding positionally to source_path.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	authority_version	text	Frozen authority version recorded by manuscript_evidence_v1.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	gap_flags	text	Semicolon-delimited evidence gaps; blank means no table-specific gap was detected.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.

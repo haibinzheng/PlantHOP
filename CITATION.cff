@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use PlantHOP, please cite the associated manuscript and the archived software release."
+title: "PlantHOP: hierarchy-aware cross-species transfer of plant cell programs"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Zheng
+    given-names: Haibin
+    orcid: "https://orcid.org/0000-0002-8997-5343"
+  - family-names: Shu
+    given-names: Hang
+    orcid: "https://orcid.org/0009-0001-4315-2333"
+  - family-names: Jin
+    given-names: Jingjing
+  - family-names: Ma
+    given-names: Mengxue
+    orcid: "https://orcid.org/0009-0009-5594-5056"
+  - family-names: Feng
+    given-names: Wenhui
+    orcid: "https://orcid.org/0009-0001-2286-2002"
+  - family-names: Li
+    given-names: Yingxin
+    orcid: "https://orcid.org/0009-0005-3516-0594"
+  - family-names: Yu
+    given-names: Zhenyang
+    orcid: "https://orcid.org/0009-0006-6534-1561"
+  - family-names: Wang
+    given-names: Yifan
+    orcid: "https://orcid.org/0009-0009-8898-1651"
+repository-code: "https://github.com/haibinzheng/PlantHOP"
+license: MIT
+keywords:
+  - single-cell transcriptomics
+  - plant biology
+  - orthogroups
+  - cross-species transfer
+  - label hierarchy
+

@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Environments and editors
+.venv/
+venv/
+.conda/
+.idea/
+.vscode/
+
+# Large biological data and derived matrices
+data/
+*.h5ad
+*.h5
+*.hdf5
+*.rds
+*.RDS
+*.rds.gz
+*.mtx
+*.mtx.gz
+*.loom
+*.zarr/
+*.fasta
+*.fa
+*.faa
+*.fastq
+*.fastq.gz
+
+# Model weights, caches, and temporary products
+*.pt
+*.pth
+*.ckpt
+cache/
+tmp/
+scratch/
+logs/
+*.log
+
+# Credentials and local configuration
+.env
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+known_hosts
+
+# Manuscript working files
+manuscript/
+submission/
+

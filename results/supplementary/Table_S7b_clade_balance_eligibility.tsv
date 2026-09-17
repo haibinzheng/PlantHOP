@@ -1,0 +1,12 @@
+panel	coarse_label	eligible_species_count	eligible_species	eudicot_count	monocot_count	cross_clade_evaluable	strict_2plus2_evaluable	design_note
+leaf	epidermal_system	4	Arabidopsis thaliana; Brassica rapa; Catharanthus roseus; Glycine max	4	0	false	false	absence of clade eligibility is not evidence of non-conservation
+leaf	photosynthetic_ground_tissue	4	Arabidopsis thaliana; Brassica rapa; Catharanthus roseus; Glycine max	4	0	false	false	absence of clade eligibility is not evidence of non-conservation
+leaf	vascular_system	3	Arabidopsis thaliana; Catharanthus roseus; Glycine max	3	0	false	false	absence of clade eligibility is not evidence of non-conservation
+root	epidermal_system	4	Arabidopsis thaliana; Glycine max; Oryza sativa; Sorghum bicolor	2	2	true	true	absence of clade eligibility is not evidence of non-conservation
+root	ground_tissue	4	Arabidopsis thaliana; Glycine max; Oryza sativa; Sorghum bicolor	2	2	true	true	absence of clade eligibility is not evidence of non-conservation
+root	root_cap	4	Arabidopsis thaliana; Catharanthus roseus; Glycine max; Sorghum bicolor	3	1	true	false	absence of clade eligibility is not evidence of non-conservation
+root	stele_lineage	5	Arabidopsis thaliana; Catharanthus roseus; Glycine max; Oryza sativa; Sorghum bicolor	3	2	true	true	absence of clade eligibility is not evidence of non-conservation
+vascular	phloem_lineage	5	Arabidopsis thaliana; Catharanthus roseus; Glycine max; Oryza sativa; Sorghum bicolor	3	2	true	true	absence of clade eligibility is not evidence of non-conservation
+vascular	procambial_lineage	2	Arabidopsis thaliana; Glycine max	2	0	false	false	absence of clade eligibility is not evidence of non-conservation
+vascular	vascular_unspecified	3	Arabidopsis thaliana; Catharanthus roseus; Glycine max	3	0	false	false	absence of clade eligibility is not evidence of non-conservation
+vascular	xylem_lineage	4	Arabidopsis thaliana; Glycine max; Oryza sativa; Sorghum bicolor	2	2	true	true	absence of clade eligibility is not evidence of non-conservation

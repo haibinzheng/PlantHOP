@@ -1,0 +1,39 @@
+field	description	missing_value_policy
+section	Record type within Table S6.	Blank means not applicable or unavailable; never interpret as zero.
+species	Species code used by the frozen GSE268881 analysis (esa or sir).	Blank means not applicable or unavailable; never interpret as zero.
+endpoint_id	Frozen nested binary endpoint.	Blank means not applicable or unavailable; never interpret as zero.
+scope	Pooled cells or within-study replicate R1/R2.	Blank means not applicable or unavailable; never interpret as zero.
+program	Frozen orthogroup-program variant.	Blank means not applicable or unavailable; never interpret as zero.
+k	Frozen top-K rank-encoding value when applicable.	Blank means not applicable or unavailable; never interpret as zero.
+permutation_id	Feature tie-order condition identifier; 0 is immutable source order.	Blank means not applicable or unavailable; never interpret as zero.
+order_condition	Feature-order condition label.	Blank means not applicable or unavailable; never interpret as zero.
+positive_cells	Number of endpoint-positive cells.	Blank means not applicable or unavailable; never interpret as zero.
+negative_cells	Number of endpoint-negative cells.	Blank means not applicable or unavailable; never interpret as zero.
+auroc	Area under the receiver-operating-characteristic curve.	Blank means not applicable or unavailable; never interpret as zero.
+average_precision	Average precision under endpoint class prevalence.	Blank means not applicable or unavailable; never interpret as zero.
+smd	Standardized mean difference of program scores, positive minus negative.	Blank means not applicable or unavailable; never interpret as zero.
+mean_positive	Mean program score in endpoint-positive cells.	Blank means not applicable or unavailable; never interpret as zero.
+mean_negative	Mean program score in endpoint-negative cells.	Blank means not applicable or unavailable; never interpret as zero.
+conditions	Number of K and feature-order conditions summarized.	Blank means not applicable or unavailable; never interpret as zero.
+auroc_min	Minimum AUROC across summarized conditions.	Blank means not applicable or unavailable; never interpret as zero.
+auroc_max	Maximum AUROC across summarized conditions.	Blank means not applicable or unavailable; never interpret as zero.
+smd_min	Minimum SMD across summarized conditions.	Blank means not applicable or unavailable; never interpret as zero.
+smd_max	Maximum SMD across summarized conditions.	Blank means not applicable or unavailable; never interpret as zero.
+all_auroc_above_chance	Whether AUROC exceeded 0.5 in every summarized condition.	Blank means not applicable or unavailable; never interpret as zero.
+all_smd_positive	Whether SMD was positive in every summarized condition.	Blank means not applicable or unavailable; never interpret as zero.
+joint_positive_direction_fraction	Fraction of summarized conditions with AUROC > 0.5 and SMD > 0.	Blank means not applicable or unavailable; never interpret as zero.
+full_auroc	AUROC for the complete frozen 18-OG program.	Blank means not applicable or unavailable; never interpret as zero.
+partial_exclusion_auroc	AUROC after documented 5-OG overlap exclusion.	Blank means not applicable or unavailable; never interpret as zero.
+partial_minus_full_auroc	Partial-exclusion minus complete-program AUROC.	Blank means not applicable or unavailable; never interpret as zero.
+full_average_precision	Average precision for the complete program.	Blank means not applicable or unavailable; never interpret as zero.
+partial_exclusion_average_precision	Average precision after documented overlap exclusion.	Blank means not applicable or unavailable; never interpret as zero.
+partial_minus_full_average_precision	Partial-exclusion minus complete-program average precision.	Blank means not applicable or unavailable; never interpret as zero.
+full_smd	SMD for the complete program.	Blank means not applicable or unavailable; never interpret as zero.
+partial_exclusion_smd	SMD after documented overlap exclusion.	Blank means not applicable or unavailable; never interpret as zero.
+partial_minus_full_smd	Partial-exclusion minus complete-program SMD.	Blank means not applicable or unavailable; never interpret as zero.
+coverage	Coverage of the circularity stress test.	Blank means not applicable or unavailable; never interpret as zero.
+allowed_claim	Maximum supported circularity claim.	Blank means not applicable or unavailable; never interpret as zero.
+residual_risk	Unresolved label-circularity limitation.	Blank means not applicable or unavailable; never interpret as zero.
+label_evidence	Provenance of endpoint labels.	Blank means not applicable or unavailable; never interpret as zero.
+scoring_layer	Expression layer used for scoring.	Blank means not applicable or unavailable; never interpret as zero.
+interpretation	Section-specific interpretation boundary.	Blank means not applicable or unavailable; never interpret as zero.

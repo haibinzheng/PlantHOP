@@ -1,0 +1,55 @@
+table	field	description	missing_value_policy
+Table_S7a_discovery_threshold_sensitivity.tsv	top_n	Within-species positive-effect rank cutoff.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7a_discovery_threshold_sensitivity.tsv	minimum_species_recurrence	Minimum number of recurrent species required for candidate selection.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7a_discovery_threshold_sensitivity.tsv	scope	All panels or one named anatomical panel.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7a_discovery_threshold_sensitivity.tsv	candidate_count	Candidates meeting the top-N and species-recurrence condition.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7a_discovery_threshold_sensitivity.tsv	cross_clade_presence_count	Selected candidates present in at least one eudicot and one monocot.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7a_discovery_threshold_sensitivity.tsv	strict_2plus2_clade_balance_count	Selected candidates present in at least two eudicots and two monocots.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7a_discovery_threshold_sensitivity.tsv	frozen_102_retained_count	Members of the frozen top-100/minimum-3 candidate set retained.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7a_discovery_threshold_sensitivity.tsv	frozen_102_retained_fraction	Fraction of the complete frozen 102-candidate reference set retained.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7a_discovery_threshold_sensitivity.tsv	interpretation	Interpretation boundary for the threshold-sensitivity row.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7b_clade_balance_eligibility.tsv	panel	Frozen anatomical panel.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7b_clade_balance_eligibility.tsv	coarse_label	Frozen coarse cell-label group.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7b_clade_balance_eligibility.tsv	eligible_species_count	Species represented for this panel and label.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7b_clade_balance_eligibility.tsv	eligible_species	Semicolon-separated represented species.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7b_clade_balance_eligibility.tsv	eudicot_count	Number of represented eudicot species.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7b_clade_balance_eligibility.tsv	monocot_count	Number of represented monocot species.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7b_clade_balance_eligibility.tsv	cross_clade_evaluable	Whether both eudicots and monocots are represented.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7b_clade_balance_eligibility.tsv	strict_2plus2_evaluable	Whether at least two eudicots and two monocots are represented.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7b_clade_balance_eligibility.tsv	design_note	Design limitation relevant to clade-balance interpretation.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	frozen_rank	Rank in the submitted frozen 18-orthogroup xylem program.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	orthogroup_id	Frozen orthogroup identifier.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	mapped_in_all_three_validation_species	Whether the program member maps in all three GSE268881 species assets.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	top25_species_count	Species recurring within their top 25 vascular-xylem markers.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	top50_species_count	Species recurring within their top 50 vascular-xylem markers.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	top100_species_count	Species recurring within their top 100 vascular-xylem markers.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	top100_species	Species supporting top-100 vascular-xylem rediscovery.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	top100_eudicot_count	Rediscovery-supporting eudicot count.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	top100_monocot_count	Rediscovery-supporting monocot count.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	selected_top100_min3	Whether independently rediscovered under the frozen top-100/minimum-3 rule.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	cross_clade_presence_top100	Whether top-100 recurrence includes a eudicot and a monocot.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	single_gene_representatives	Deterministic representatives where available; not proof of one-to-one orthology.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	annotation_class	Availability class of functional annotation.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	function_symbols	Available gene or protein symbols.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	evidence_scope	Maximum scope of the mapped/annotation evidence.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	gap_flags	Semicolon-separated unresolved evidence gaps.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7c_xylem_program_rediscovery.tsv	allowed_claim	Maximum claim supported by the row.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	panel	Frozen anatomical panel.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	coarse_label	Frozen coarse cell-label group.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	orthogroup_id	Frozen orthogroup identifier.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	discovery_species_count_top100	Species count supporting the priority family in frozen top-100 discovery.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	cross_study_family_status	Internal leave-one-study-out expression robustness category.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	heldout_tests	Number of evaluable held-out study tests.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	heldout_positive_fraction	Fraction of held-out tests with positive direction.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	species_with_positive_gene_level_marker	Species containing a positive gene-level family member.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	species_with_single_dominant_pattern	Species classified as having a single-dominant expression pattern.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	species_with_dominance_rows	Species with gene-dominance evidence rows.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	dominant_genes_by_species	Descriptive dominant genes by species; not proof of orthology or substitution.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	supported_tree_pattern	Conservative pattern from clean supported-tree analysis.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	observed_mrca_sh_alrt	SH-aLRT support at the observed dominant-gene MRCA, when available.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	observed_mrca_ultrafast_bootstrap	Ultrafast-bootstrap support at the observed dominant-gene MRCA, when available.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	joint_evidence_status_existing	Existing integrated expression/tree evidence category.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	conservative_evidence_tier	Conservative evidence tier assigned by the P1 authority package.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	one_to_one_ortholog_claim	Whether one-to-one orthology is established; expected to remain not_established.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	paralog_substitution_claim	Whether paralog substitution is established; expected to remain not_established.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S7d_single_gene_ortholog_evidence_gaps.tsv	main_gap	Principal unresolved evidence limitation.	Blank means unavailable or not applicable; never interpret as zero.
