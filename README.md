@@ -13,6 +13,8 @@ PlantHOP is a hierarchy-aware workflow for testing fixed orthogroup-level plant 
 - `environment/`: a portable analysis environment and the exact Linux Conda package export used for the orthogroup workflow.
 - `docs/`: data-access and reproduction guidance.
 
+Terminology note: legacy script variables containing `complete_family` refer to the manuscript's mapped-member aggregation--all orthogroup members successfully mapped in the target object. They do not imply complete target-species gene-family or proteome coverage.
+
 ## What is not included
 
 Raw or standardized H5AD/RDS objects, third-party reference proteomes, pretrained model weights, private server details, and manuscript working files are intentionally excluded. Public source accessions and the expected local layout are described in `docs/DATA_AVAILABILITY.md`. Publication and direct-download metadata are included where resolved; unresolved fields remain blank and carry explicit gap flags.
