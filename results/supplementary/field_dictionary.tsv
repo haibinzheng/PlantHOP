@@ -65,7 +65,7 @@ Table_S5	panel	text	Panel.		Blank means unavailable/not applicable; consult gap_
 Table_S5	coarse_label	text	Coarse label.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	role	text	Role.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	endpoint_status	text	Endpoint status.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
-Table_S5	eligibility	text	Prospective endpoint eligibility before scoring.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	eligibility	text	Pre-specified held-out endpoint eligibility before scoring.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	record_scope	text	pooled or replicate-level scope; R1/R2 are replicate identifiers in the controls table.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	replicate	text	Replicate.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	record_type	text	Record type.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.

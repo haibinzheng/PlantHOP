@@ -18,6 +18,6 @@ Frozen machine-readable tables attached to the current manuscript package:
 Supporting dictionaries:
 
 - `field_dictionary.tsv`: field definitions and missing-value policy.
-Tables S1--S7d are versioned derivatives of the retained analysis outputs. Blanks are not imputed or converted to zero. Table S4 does not transfer legacy A/B priority tiers into the xylem programme. Build logs, source manifests and internal integrity records are retained with the project process files rather than included in the reviewer-facing supplement.
+Tables S1--S7d are versioned derivatives of the retained analysis outputs. Blanks are not imputed or converted to zero. Table S4 does not transfer legacy A/B priority tiers into the xylem programme. Legacy internal identifiers containing `prospective` are retained solely for provenance and do not denote public preregistration. Build logs, source manifests and internal integrity records are retained with the project process files rather than included in the reviewer-facing supplement.
 
 The version-controlled reproducibility repository is `https://github.com/haibinzheng/PlantHOP`. It remains private during manuscript preparation; editor and reviewer access can be provided by the corresponding author. The repository includes the portable Conda environment, exact Linux package export, fixed mappings, evidence tables, checksums and analysis scripts. A public versioned archival release with a persistent identifier will be completed no later than publication.
