@@ -56,3 +56,10 @@ known_hosts
 manuscript/
 submission/
 
+# Regenerable figure QA and provenance sidecars
+results/figures/*.png
+results/figures/STATUS
+results/figures/audit.json
+results/figures/figure*_audit.json
+results/figures/figure_source_manifest.tsv
+results/figures/figure_captions_and_alt_text.md

@@ -15,10 +15,13 @@ from reportlab.pdfgen import canvas
 
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parent
-RESOURCE = PROJECT / "manuscript_evidence_v1" / "figure1_resource_flow.tsv"
-CANDIDATES = PROJECT / "conserved_program_candidates_v2_audit.json"
-OUT_PDF = HERE / "figure1_resource_to_validation.pdf"
-AUDIT = HERE / "figure1_v1_2_audit.json"
+FIGURE_DATA = PROJECT / "results" / "figure_data"
+OUT_DIR = PROJECT / "results" / "figures"
+RESOURCE = FIGURE_DATA / "figure1_resource_flow.tsv"
+CANDIDATES = FIGURE_DATA / "conserved_program_candidates_v2_audit.json"
+OUT_PDF = OUT_DIR / "figure1_resource_to_validation.pdf"
+AUDIT = OUT_DIR / "figure1_v1_2_audit.json"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 PAGE_W, PAGE_H = 7.2 * 72, 7.25 * 72
 C = {
@@ -92,7 +95,8 @@ y_top, y_bottom = PAGE_H - 35, 246
 
 # A: resource overview
 title(c, x1, y_top, "A", "Resource overview")
-text(c, x1, y_top - 20, f"121 readable H5AD  |  {total:,} cells  |  33 species", 7.8)
+text(c, x1, y_top - 20, f"121 readable H5AD  |  {total:,} cells", 7.6)
+text(c, x1, y_top - 31, "33 reported species assignments", 7.6)
 bar_y, bar_h, bar_w = y_top - 82, 32, panel_w
 lab_w = bar_w * labeled / total
 c.setFillColor(C["navy"]); c.rect(x1, bar_y, lab_w, bar_h, fill=1, stroke=0)

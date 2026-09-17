@@ -1,0 +1,51 @@
+{
+  "version": "manuscript_figures_v1_1",
+  "frozen_before_rendering": true,
+  "width_inches": 7.2,
+  "dpi": 300,
+  "font_family": "DejaVu Sans",
+  "font_sizes": {
+    "title": 11,
+    "panel_label": 12,
+    "axis_label": 8,
+    "tick": 7,
+    "annotation": 6.5,
+    "legend": 7
+  },
+  "palette": {
+    "resource": "#4477AA",
+    "labeled": "#66A61E",
+    "unknown": "#B8B8B8",
+    "primary_pass": "#228833",
+    "primary_fail": "#EE7733",
+    "sensitivity": "#4477AA",
+    "excluded": "#999999",
+    "negative_control": "#AA3377",
+    "single_gene": "#CCBB44",
+    "equal_weight": "#66CCEE",
+    "anti_circular": "#44AA99",
+    "complete_family": "#332288",
+    "grid": "#E6E6E6",
+    "text": "#222222"
+  },
+  "status_encoding": {
+    "primary_pass": {"color": "primary_pass", "marker": "o", "linestyle": "solid"},
+    "primary_fail": {"color": "primary_fail", "marker": "X", "linestyle": "solid"},
+    "sensitivity_support_not_primary": {"color": "sensitivity", "marker": "D", "linestyle": "dashed"},
+    "excluded_before_scoring": {"color": "excluded", "marker": "x", "linestyle": "dotted"}
+  },
+  "layouts": {
+    "figure1": {"height_inches": 6.8, "panels": "2x2: resource summary; hierarchical label resolution; frozen inclusion; workflow"},
+    "figure2": {"height_inches": 7.2, "panels": "2x2: pooled AUROC; replicate AUROC; family-single delta; endpoint key"},
+    "figure3": {"height_inches": 6.4, "panels": "2x2: pooled conditional intervals; replicate intervals; eligibility threshold; scope note"},
+    "figure4": {"height_inches": 7.2, "panels": "2x2: negative controls; method comparators with external legend; paired delta; random null"},
+    "figure5": {"height_inches": 5.3, "panels": "annotated orthogroup subset: mapping, annotation-available class, descriptive annotation"},
+    "supplementary_s1": {"height_inches": 4.5, "panels": "top-ten audited species collections"},
+    "supplementary_s2": {"height_inches": 8.0, "panels": "complete 18-orthogroup mapping matrix and annotation-availability class"}
+  },
+  "statistical_labels": {
+    "bootstrap": "95% interval conditional on observed biological replicates",
+    "random_null": "500 frozen random programs per species",
+    "causal_boundary": "Functional annotations are descriptive associations, not causal evidence."
+  }
+}

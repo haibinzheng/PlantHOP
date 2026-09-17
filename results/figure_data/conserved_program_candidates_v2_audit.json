@@ -1,0 +1,397 @@
+{
+  "generated_at_utc": "2026-09-11T05:53:08.236275+00:00",
+  "status": "exploratory_candidates_not_independently_validated",
+  "method": {
+    "comparison": "coarse class versus all other coarse classes within the same species and panel",
+    "feature": "L2-normalized rank-encoded orthogroup score from frozen baseline",
+    "ranking": "positive mean score difference, descending",
+    "top_n_per_species_class": 100,
+    "minimum_class_cells": 100,
+    "minimum_other_cells": 100,
+    "minimum_species_recurrence": 3
+  },
+  "eligible_species_class_tests": 42,
+  "species_marker_rows": 4200,
+  "conserved_candidate_rows": 102,
+  "candidate_counts_by_panel": {
+    "leaf": 39,
+    "root": 28,
+    "vascular": 35
+  },
+  "candidate_counts_by_panel_and_class": {
+    "leaf|epidermal_system": 9,
+    "leaf|photosynthetic_ground_tissue": 30,
+    "root|epidermal_system": 5,
+    "root|ground_tissue": 8,
+    "root|root_cap": 1,
+    "root|stele_lineage": 14,
+    "vascular|phloem_lineage": 17,
+    "vascular|xylem_lineage": 18
+  },
+  "inputs": {
+    "hierarchy": {
+      "path": "internal_source_record:not_publicly_portable",
+      "sha256": "e139f4d944b153210afd8aef98174679bf7caead33207fadc3a2e8c4cb619abb"
+    },
+    "orthogroup_map": {
+      "path": "internal_source_record:not_publicly_portable",
+      "sha256": "661ee054724a6bb1e14ee8c3fac1525adee885922e5971acb9a38bf649c46e98"
+    },
+    "feature_dir": "internal_source_record:not_publicly_portable"
+  },
+  "feature_representation": {
+    "panel_species_combinations": 14,
+    "usable_panel_species_combinations": 14,
+    "zero_feature_panel_species": []
+  },
+  "outputs": {
+    "detail": "internal_source_record:not_publicly_portable",
+    "conserved": "internal_source_record:not_publicly_portable",
+    "representation_audit": "internal_source_record:not_publicly_portable"
+  },
+  "caveats": [
+    "Candidates are derived from the same frozen observational datasets and are not independent validation.",
+    "Orthogroup recurrence does not establish conserved function or causal mechanism.",
+    "Multi-gene orthogroups may reflect paralog substitution and require gene-level follow-up.",
+    "Rank features were designed for robust cross-dataset comparison, not differential-expression inference.",
+    "Zero-feature species are excluded from marker comparisons; a zero candidate count is not biological evidence of non-conservation."
+  ],
+  "eligible_tests": [
+    {
+      "panel": "leaf",
+      "species": "Arabidopsis thaliana",
+      "coarse_label": "epidermal_system",
+      "n_in": 11038,
+      "n_out": 14495,
+      "positive_features": 6378
+    },
+    {
+      "panel": "leaf",
+      "species": "Arabidopsis thaliana",
+      "coarse_label": "photosynthetic_ground_tissue",
+      "n_in": 12834,
+      "n_out": 12699,
+      "positive_features": 5698
+    },
+    {
+      "panel": "leaf",
+      "species": "Arabidopsis thaliana",
+      "coarse_label": "vascular_system",
+      "n_in": 1661,
+      "n_out": 23872,
+      "positive_features": 4171
+    },
+    {
+      "panel": "leaf",
+      "species": "Brassica rapa",
+      "coarse_label": "epidermal_system",
+      "n_in": 1500,
+      "n_out": 1500,
+      "positive_features": 985
+    },
+    {
+      "panel": "leaf",
+      "species": "Brassica rapa",
+      "coarse_label": "photosynthetic_ground_tissue",
+      "n_in": 1500,
+      "n_out": 1500,
+      "positive_features": 1172
+    },
+    {
+      "panel": "leaf",
+      "species": "Catharanthus roseus",
+      "coarse_label": "epidermal_system",
+      "n_in": 1887,
+      "n_out": 3000,
+      "positive_features": 4068
+    },
+    {
+      "panel": "leaf",
+      "species": "Catharanthus roseus",
+      "coarse_label": "photosynthetic_ground_tissue",
+      "n_in": 1500,
+      "n_out": 3387,
+      "positive_features": 2486
+    },
+    {
+      "panel": "leaf",
+      "species": "Catharanthus roseus",
+      "coarse_label": "vascular_system",
+      "n_in": 1500,
+      "n_out": 3387,
+      "positive_features": 5931
+    },
+    {
+      "panel": "leaf",
+      "species": "Glycine max",
+      "coarse_label": "epidermal_system",
+      "n_in": 2259,
+      "n_out": 4738,
+      "positive_features": 6790
+    },
+    {
+      "panel": "leaf",
+      "species": "Glycine max",
+      "coarse_label": "photosynthetic_ground_tissue",
+      "n_in": 3640,
+      "n_out": 3357,
+      "positive_features": 4070
+    },
+    {
+      "panel": "leaf",
+      "species": "Glycine max",
+      "coarse_label": "vascular_system",
+      "n_in": 1098,
+      "n_out": 5899,
+      "positive_features": 5033
+    },
+    {
+      "panel": "root",
+      "species": "Arabidopsis thaliana",
+      "coarse_label": "epidermal_system",
+      "n_in": 18438,
+      "n_out": 38084,
+      "positive_features": 6807
+    },
+    {
+      "panel": "root",
+      "species": "Arabidopsis thaliana",
+      "coarse_label": "ground_tissue",
+      "n_in": 19982,
+      "n_out": 36540,
+      "positive_features": 4289
+    },
+    {
+      "panel": "root",
+      "species": "Arabidopsis thaliana",
+      "coarse_label": "root_cap",
+      "n_in": 4867,
+      "n_out": 51655,
+      "positive_features": 4592
+    },
+    {
+      "panel": "root",
+      "species": "Arabidopsis thaliana",
+      "coarse_label": "stele_lineage",
+      "n_in": 13235,
+      "n_out": 43287,
+      "positive_features": 4725
+    },
+    {
+      "panel": "root",
+      "species": "Catharanthus roseus",
+      "coarse_label": "root_cap",
+      "n_in": 216,
+      "n_out": 629,
+      "positive_features": 1221
+    },
+    {
+      "panel": "root",
+      "species": "Catharanthus roseus",
+      "coarse_label": "stele_lineage",
+      "n_in": 629,
+      "n_out": 216,
+      "positive_features": 4268
+    },
+    {
+      "panel": "root",
+      "species": "Glycine max",
+      "coarse_label": "epidermal_system",
+      "n_in": 2250,
+      "n_out": 4769,
+      "positive_features": 5289
+    },
+    {
+      "panel": "root",
+      "species": "Glycine max",
+      "coarse_label": "ground_tissue",
+      "n_in": 3072,
+      "n_out": 3947,
+      "positive_features": 4922
+    },
+    {
+      "panel": "root",
+      "species": "Glycine max",
+      "coarse_label": "root_cap",
+      "n_in": 197,
+      "n_out": 6822,
+      "positive_features": 2005
+    },
+    {
+      "panel": "root",
+      "species": "Glycine max",
+      "coarse_label": "stele_lineage",
+      "n_in": 1500,
+      "n_out": 5519,
+      "positive_features": 6106
+    },
+    {
+      "panel": "root",
+      "species": "Oryza sativa",
+      "coarse_label": "epidermal_system",
+      "n_in": 1688,
+      "n_out": 5006,
+      "positive_features": 6425
+    },
+    {
+      "panel": "root",
+      "species": "Oryza sativa",
+      "coarse_label": "ground_tissue",
+      "n_in": 2876,
+      "n_out": 3818,
+      "positive_features": 7199
+    },
+    {
+      "panel": "root",
+      "species": "Oryza sativa",
+      "coarse_label": "stele_lineage",
+      "n_in": 2130,
+      "n_out": 4564,
+      "positive_features": 4278
+    },
+    {
+      "panel": "root",
+      "species": "Sorghum bicolor",
+      "coarse_label": "epidermal_system",
+      "n_in": 750,
+      "n_out": 2991,
+      "positive_features": 1252
+    },
+    {
+      "panel": "root",
+      "species": "Sorghum bicolor",
+      "coarse_label": "ground_tissue",
+      "n_in": 1054,
+      "n_out": 2687,
+      "positive_features": 2418
+    },
+    {
+      "panel": "root",
+      "species": "Sorghum bicolor",
+      "coarse_label": "root_cap",
+      "n_in": 750,
+      "n_out": 2991,
+      "positive_features": 983
+    },
+    {
+      "panel": "root",
+      "species": "Sorghum bicolor",
+      "coarse_label": "stele_lineage",
+      "n_in": 1187,
+      "n_out": 2554,
+      "positive_features": 1683
+    },
+    {
+      "panel": "vascular",
+      "species": "Arabidopsis thaliana",
+      "coarse_label": "phloem_lineage",
+      "n_in": 10146,
+      "n_out": 9984,
+      "positive_features": 8355
+    },
+    {
+      "panel": "vascular",
+      "species": "Arabidopsis thaliana",
+      "coarse_label": "procambial_lineage",
+      "n_in": 6528,
+      "n_out": 13602,
+      "positive_features": 3962
+    },
+    {
+      "panel": "vascular",
+      "species": "Arabidopsis thaliana",
+      "coarse_label": "vascular_unspecified",
+      "n_in": 750,
+      "n_out": 19380,
+      "positive_features": 1642
+    },
+    {
+      "panel": "vascular",
+      "species": "Arabidopsis thaliana",
+      "coarse_label": "xylem_lineage",
+      "n_in": 2706,
+      "n_out": 17424,
+      "positive_features": 3433
+    },
+    {
+      "panel": "vascular",
+      "species": "Catharanthus roseus",
+      "coarse_label": "phloem_lineage",
+      "n_in": 349,
+      "n_out": 750,
+      "positive_features": 2473
+    },
+    {
+      "panel": "vascular",
+      "species": "Catharanthus roseus",
+      "coarse_label": "vascular_unspecified",
+      "n_in": 750,
+      "n_out": 349,
+      "positive_features": 5619
+    },
+    {
+      "panel": "vascular",
+      "species": "Glycine max",
+      "coarse_label": "phloem_lineage",
+      "n_in": 2856,
+      "n_out": 3836,
+      "positive_features": 4962
+    },
+    {
+      "panel": "vascular",
+      "species": "Glycine max",
+      "coarse_label": "procambial_lineage",
+      "n_in": 750,
+      "n_out": 5942,
+      "positive_features": 5184
+    },
+    {
+      "panel": "vascular",
+      "species": "Glycine max",
+      "coarse_label": "vascular_unspecified",
+      "n_in": 1848,
+      "n_out": 4844,
+      "positive_features": 6214
+    },
+    {
+      "panel": "vascular",
+      "species": "Glycine max",
+      "coarse_label": "xylem_lineage",
+      "n_in": 1238,
+      "n_out": 5454,
+      "positive_features": 4618
+    },
+    {
+      "panel": "vascular",
+      "species": "Oryza sativa",
+      "coarse_label": "phloem_lineage",
+      "n_in": 687,
+      "n_out": 750,
+      "positive_features": 2680
+    },
+    {
+      "panel": "vascular",
+      "species": "Oryza sativa",
+      "coarse_label": "xylem_lineage",
+      "n_in": 750,
+      "n_out": 687,
+      "positive_features": 2776
+    },
+    {
+      "panel": "vascular",
+      "species": "Sorghum bicolor",
+      "coarse_label": "phloem_lineage",
+      "n_in": 216,
+      "n_out": 277,
+      "positive_features": 1123
+    },
+    {
+      "panel": "vascular",
+      "species": "Sorghum bicolor",
+      "coarse_label": "xylem_lineage",
+      "n_in": 277,
+      "n_out": 216,
+      "positive_features": 704
+    }
+  ]
+}

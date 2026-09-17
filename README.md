@@ -10,6 +10,7 @@ PlantHOP is a hierarchy-aware workflow for testing fixed orthogroup-level plant 
 - `metadata/`: fixed label-governance and conserved-programme records.
 - `results/supplementary/`: machine-readable Tables S1, S1b, S2--S6 and S7a--S7d, field dictionaries and detailed methods.
 - `results/figures/`: the current manuscript and supplementary figures distributed with the reproducibility snapshot.
+- `results/figure_data/`: frozen, figure-level evidence tables and the design specification used to regenerate the submitted figures.
 - `environment/`: a portable analysis environment and the exact Linux Conda package export used for the orthogroup workflow.
 - `docs/`: data-access and reproduction guidance.
 
@@ -36,6 +37,16 @@ python scripts/phylo_open_cell_governance.py --help
 python scripts/build_marker_rank_features_v2.py --help
 python scripts/build_conserved_orthogroup_markers.py --help
 ```
+
+Regenerate the submitted figures from the frozen figure-level evidence:
+
+```bash
+python scripts/plot_figure1_v1_2.py
+python scripts/build_main_figures_v1_2.py
+python scripts/plot_manuscript_figures_v1_1.py
+```
+
+The commands build Figure 1, Figures 2--3, and Figures 4--5 plus Supplementary Figures S1--S2, respectively. Legacy `/data/` or `/workspace/` values retained in `source_path` columns are internal provenance records and are not expected to resolve outside the original analysis environment; the public evidence tables and checksums used for plotting are stored in this repository.
 
 Run scripts from the repository root and place third-party inputs under a local `data/` directory, or override their command-line paths where available. See `docs/REPRODUCIBILITY.md` for the workflow map and known evidence gaps.
 
