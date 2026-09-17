@@ -55,8 +55,8 @@ def fl(value: str) -> float:
     return float(value)
 
 
-def panel_label(ax, label: str) -> None:
-    ax.text(-0.12, 1.06, label, transform=ax.transAxes, fontsize=FS["panel_label"], fontweight="bold", va="top")
+def panel_label(ax, label: str, x: float = -0.12, y: float = 1.06) -> None:
+    ax.text(x, y, label, transform=ax.transAxes, fontsize=FS["panel_label"], fontweight="bold", va="top")
 
 
 def clean_axes(ax, grid_axis: str | None = "y") -> None:
@@ -327,7 +327,7 @@ def figure4() -> dict[str, object]:
     fig, axs = plt.subplots(2, 2, figsize=(WIDTH, LAYOUT["figure4"]["height_inches"]), constrained_layout=False)
     fig.subplots_adjust(left=0.09, right=0.98, top=0.94, bottom=0.10, wspace=0.30, hspace=0.60)
     ax = axs[0, 0]
-    panel_label(ax, "A")
+    panel_label(ax, "A", x=-0.17, y=1.08)
     methods = ["complete_family", "anti_circular", "phloem_off_target"]
     labels = ["Mapped members", "Marker-overlap exclusion", "Phloem off-target"]
     colors = [C["complete_family"], C["anti_circular"], C["negative_control"]]
@@ -343,7 +343,7 @@ def figure4() -> dict[str, object]:
     clean_axes(ax)
 
     ax = axs[0, 1]
-    panel_label(ax, "B")
+    panel_label(ax, "B", x=-0.17, y=1.08)
     methods = ["complete_family", "equal_weight", "single_gene"]
     labels = ["Mapped members", "Equal weight", "Single gene"]
     colors = [C["complete_family"], C["equal_weight"], C["single_gene"]]
@@ -358,7 +358,7 @@ def figure4() -> dict[str, object]:
     clean_axes(ax)
 
     ax = axs[1, 0]
-    panel_label(ax, "C")
+    panel_label(ax, "C", x=-0.17, y=1.08)
     for i, r in enumerate(sorted(deltas, key=lambda x: x["species"])):
         est, lo, hi = fl(r["estimate"]), fl(r["lower_95"]), fl(r["upper_95"])
         ax.errorbar(i, est, yerr=[[est - lo], [hi - est]], fmt="o", markersize=7, capsize=4, color=C["complete_family"], linewidth=1.4)
@@ -371,7 +371,7 @@ def figure4() -> dict[str, object]:
     clean_axes(ax)
 
     ax = axs[1, 1]
-    panel_label(ax, "D")
+    panel_label(ax, "D", x=-0.17, y=1.08)
     for i, r in enumerate(sorted(random, key=lambda x: x["species"])):
         median, q95 = fl(r["random_auc_median"]), fl(r["random_auc_q95"])
         observed = fl(idx[(r["species"], "complete_family")]["auroc"])
