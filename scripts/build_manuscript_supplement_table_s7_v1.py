@@ -85,7 +85,7 @@ DESCRIPTIONS = {
     "observed_mrca_sh_alrt": "SH-aLRT support at the observed dominant-gene MRCA, when available.",
     "observed_mrca_ultrafast_bootstrap": "Ultrafast-bootstrap support at the observed dominant-gene MRCA, when available.",
     "joint_evidence_status_existing": "Existing integrated expression/tree evidence category.",
-    "conservative_evidence_tier": "Conservative evidence tier assigned by the P1 authority package.",
+    "conservative_evidence_tier": "Conservative evidence tier assigned from the available annotation and mapping evidence.",
     "one_to_one_ortholog_claim": "Whether one-to-one orthology is established; expected to remain not_established.",
     "paralog_substitution_claim": "Whether paralog substitution is established; expected to remain not_established.",
     "main_gap": "Principal unresolved evidence limitation.",
@@ -104,7 +104,7 @@ def main() -> int:
             raise FileNotFoundError(path)
     authority = json.loads(AUTHORITY.read_text(encoding="utf-8"))
     if authority.get("status") != "COMPLETE_WITH_GAPS" or not all(authority.get("checks", {}).values()):
-        raise RuntimeError("P1 authority is not complete")
+        raise RuntimeError("Priority-family evidence record is not complete")
 
     expected = {
         "Table_S7a_discovery_threshold_sensitivity.tsv": 48,

@@ -73,7 +73,7 @@ def main() -> int:
             raise FileNotFoundError(path)
     source_audit = json.loads(FILES["p0_audit"].read_text(encoding="utf-8"))
     if source_audit.get("status") != "COMPLETE" or not all(source_audit.get("checks", {}).values()):
-        raise RuntimeError("P0 authority audit is not fully complete")
+        raise RuntimeError("Nested-label analysis record is not fully complete")
     OUTPUT.mkdir(parents=False)
     (OUTPUT / Path(__file__).name).write_bytes(Path(__file__).read_bytes())
 

@@ -45,7 +45,7 @@ For a different system, create a project root containing `metadata/`, `mappings/
 - Orthogroup coverage is unavailable for 40 of 121 manifest datasets.
 - Candidate bridges do not establish one-to-one orthology, functional conservation, causality, or paralog substitution.
 - Complete label-transfer features are unavailable for GSE268881, so marker-removal sensitivity does not completely exclude circularity.
-- Replicate-level raw rows for the rice v2.1 authority package were not reconstructed.
+- Replicate-level raw rows for the retained rice v2.1 validation archive were not reconstructed.
 - Zea mays was excluded from the seven-species OrthoFinder run because a source-matched Zm00001d.1 protein FASTA was unavailable.
 
 ## Release checklist
@@ -57,4 +57,3 @@ Before switching this repository to public:
 3. run syntax and checksum validation in continuous integration;
 4. verify all source accessions and third-party licenses;
 5. tag the release and archive it with Zenodo.
-
