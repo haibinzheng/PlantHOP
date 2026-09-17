@@ -2,7 +2,7 @@
 
 Frozen machine-readable tables attached to the current manuscript package:
 
-- `Table_S1_dataset_inventory.tsv`: 127 input records (121 audited resources and six additional validation inputs) covering repository accessions, resolved publication and download metadata, integrity scope, eligibility and cell counts.
+- `Table_S1_dataset_inventory.tsv`: 127 input records (121 audited resources and six additional validation inputs) covering repository/accession records, publication and download metadata where resolved, explicit provenance gaps, integrity scope, eligibility and cell counts.
 - `Table_S1b_discovery_object_checksums.tsv`: filenames, byte sizes and direct SHA-256 checksums for the 44 standardized H5AD objects used in discovery.
 - `Table_S2_label_hierarchy_dictionary.tsv`: 29 frozen panel--label governance decisions.
 - `Table_S2_source_label_mapping.tsv`: 945 governed dataset--source-label--panel records, covering 924 unique dataset--label pairs and all 3,120,007 audited cells.

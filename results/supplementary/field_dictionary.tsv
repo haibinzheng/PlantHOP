@@ -69,8 +69,8 @@ Table_S5	eligibility	text	Pre-specified held-out endpoint eligibility before sco
 Table_S5	record_scope	text	pooled or replicate-level scope; R1/R2 are replicate identifiers in the controls table.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	replicate	text	Replicate.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	record_type	text	Record type.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
-Table_S5	comparator	text	Comparator.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
-Table_S5	estimand	text	Estimand.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	comparator	text	Scoring comparator. mapped_member_program aggregates all orthogroup members successfully mapped in the target object; it does not imply complete target-species gene-family or proteome coverage.	mapped_member_program; single_gene; equal_weight_presence; random_program; off_target; other recorded comparator	Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	estimand	text	Quantity estimated for the recorded comparison.	Recorded endpoint-specific estimand; blank when not applicable	Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	mapped_orthogroups	numeric	Mapped orthogroups.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	positive_cells	numeric	Positive cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	negative_cells	numeric	Negative cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
