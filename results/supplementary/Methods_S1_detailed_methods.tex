@@ -15,7 +15,7 @@ Orthogroups were generated with OrthoFinder 3.1.5 using DIAMOND sequence search 
 
 \suppmethodsection{Input inventory and integrity checks}
 
-The governed manifest contained 121 standardized H5AD datasets. For Table S2, each readable object was opened with anndata in read-only backed mode and only obs metadata were accessed. The standardized source-label column cell\_type\_original was preferred, with celltype\_after permitted only as a recorded fallback. The scan produced 924 unique dataset--source-label pairs representing 212 distinct source-label strings and 3120007 cells. The corresponding manifest total was 3120007 cells.
+The governed manifest contained 121 audited standardized H5AD resources. After eligibility filtering, 44 unique H5AD objects contributed to discovery; their filenames, byte sizes and SHA-256 checksums are reported in Table S1b. PRJCA014789 was audited with the collection but excluded from discovery because it provided only one eligible vascular target label, and was reserved before scoring as the Populus phloem test. For Table S2, each readable object was opened with anndata in read-only backed mode and only obs metadata were accessed. The standardized source-label column cell\_type\_original was preferred, with celltype\_after permitted only as a recorded fallback. The scan produced 924 unique dataset--source-label pairs representing 212 distinct source-label strings and 3120007 cells. The corresponding manifest total was 3120007 cells.
 
 Dataset identity, accession, species, tissue, matrix storage, and source-annotation checksums were taken from dataset\_manifest.tsv and dataset\_source\_metadata.tsv. Source-label counts were calculated directly from the standardized annotation field. Expression values were not consulted. A dataset lacking a recognized source-label field would have been retained as a source\_unavailable row rather than omitted; the inventory records the number of such datasets.
 
@@ -35,7 +35,7 @@ Representative proteins were grouped by the seven-species OrthoFinder run. The r
 
 The executed rank representation used nonnegative source expression values from the frozen input layer. Within each cell, nonzero features were ordered by decreasing value, with exact ties resolved by immutable source feature order. The top 128 features were assigned weights 1/log2(rank+1), multiple source features mapping to the same orthogroup were collapsed by their maximum weight, and the sparse orthogroup vector was L2-normalized per cell. This design reduced dependence on incomparable expression magnitudes while retaining within-cell feature ordering.
 
-Marker-rank feature v2 was created for the approved leaf, root, and vascular panels in read-only backed mode. It contained 40,417 leaf cells, 74,821 root cells, and 29,851 vascular cells over the 18,383-orthogroup vocabulary. All 65 included dataset-panel combinations had nonzero mapped features. Rank features were intended for cross-dataset marker and programme analysis, not differential-expression inference.
+Marker-rank feature v2 was created for the approved leaf, root, and vascular panels in read-only backed mode. It contained 40,417 leaf cells, 74,821 root cells, and 29,851 vascular cells over the 18,383-orthogroup vocabulary. The 44 discovery objects contributed 65 object--panel combinations (23 root, 19 leaf and 23 vascular), all with nonzero mapped features. Rank features were intended for cross-dataset marker and programme analysis, not differential-expression inference.
 
 \suppmethodsection{Programme discovery}
 
@@ -43,7 +43,7 @@ Within each species and panel, each accepted coarse class was contrasted against
 
 The v2 discovery generated 4,200 species-level marker rows from 42 eligible comparisons and 102 recurrent candidates: 39 leaf, 28 root and 35 vascular. These candidates came from the observational discovery collection and were not independent validation.
 
-The GSE268881 xylem programme was selected separately as the first 18 positive orthogroups in the Arabidopsis vascular-xylem ranking in \texttt{coarse\_marker\_orthogroups\_v2.tsv}. It was not the 18-member recurrent xylem set produced by the top-100/minimum-three-species rule. The programme source, Arabidopsis rank and score difference are recorded for every member in Table S4; six of 18 members were later rediscovered by the recurrence rule (Table S7c).
+The GSE268881 xylem programme was selected separately as the first 18 positive orthogroups in the Arabidopsis vascular-xylem ranking in \texttt{coarse\_marker\_orthogroups\_v2.tsv}. It was not the 18-member recurrent xylem set produced by the top-100/minimum-three-species rule. This top-18 cut-off was a fixed heuristic chosen before external scoring, not an outcome-optimized threshold. The programme source, Arabidopsis rank and score difference are recorded for every member in Table S4; six of 18 members were later rediscovered by the recurrence rule (Table S7c).
 
 \suppmethodsection{Freeze protocol and leakage controls}
 
@@ -57,15 +57,15 @@ Study-level robustness was assessed for 19 priority orthogroups by leaving out e
 
 Independent rice validation v2.1 used the RNA counts layer from GSE232863, encoded 49,273 selected cells, mapped 14,136 orthogroups, used top $K=128$, and compared each fixed programme with 500 random programmes under seed 20260914. Version 2.1 corrected only the per-contrast sample-direction filter; programmes, contrasts, thresholds and seed were unchanged. Three of five primary contrasts passed. Replicate-level raw rows were unavailable and were not reconstructed.
 
-External validation v3 fixed the rank encoding, complete programme score, single-gene and expanded-family subsets, off-target controls, 500 random programmes and replicate-direction rule before expression scoring. The tables retain the negative Populus phloem result and distinguish unavailable values from zero. GSE268881 Esa and Sir provide nested-label discrimination and within-study repeatability evidence, not replication across independent studies; Spa remained ineligible under the metadata gate.
+External validation v3 fixed the rank encoding, mapped-member programme score, single-gene and expanded-family subsets, off-target controls, 500 random programmes and replicate-direction rule before expression scoring. The tables retain the negative Populus phloem result and distinguish unavailable values from zero. GSE268881 Esa and Sir provide held-out agreement with label-transfer-derived source assignments and within-study repeatability, not independent biological validation or replication across studies; Spa remained ineligible under the metadata gate.
 
-\suppmethodsection{Nested labels, circularity stress test, and parameter robustness}
+\suppmethodsection{Nested labels, marker-overlap exclusion, and parameter robustness}
 
 The nested-label analysis used the GSE268881 RNA counts layer and three fixed endpoints: xylem versus all other root labels; xylem versus pericycle, phloem and procambium; and stele/vascular labels versus non-stele root labels. The same 18-orthogroup score was evaluated within the same cohorts, species and biological samples, but each endpoint necessarily contained a different set of positive and negative cells. Results were calculated for pooled cells and separately for R1 and R2 in Esa and Sir. The $K=128$ source-order condition reproduced the prior pooled and replicate AUROCs to $10^{-12}$.
 
-Parameter robustness covered K values 64, 128, and 256 and the immutable source order plus ten deterministic global feature-order permutations. Across the complete programme, all 18 species--endpoint--scope groups retained AUROC above 0.5 and positive standardized mean difference in all 33 conditions per group. These direction checks are descriptive robustness results rather than new confirmatory endpoints.
+Parameter robustness covered K values 64, 128, and 256 and the immutable source order plus ten deterministic global feature-order permutations. Across the mapped-member programme, all 18 species--endpoint--scope groups retained AUROC above 0.5 and positive standardized mean difference in all 33 conditions per group. These direction checks are descriptive robustness results rather than new confirmatory endpoints.
 
-Circularity sensitivity removed five of the 18 frozen orthogroups documented as overlapping published marker evidence. The complete label-assignment or label-transfer feature set was unavailable. Therefore the analysis supports robustness to removal of documented overlap only and does not completely exclude label circularity. Integrated scale.data was not used as a substitute marker set.
+Marker-overlap sensitivity removed five of the 18 fixed orthogroups documented as overlapping published marker evidence. The complete label-assignment or label-transfer feature set was unavailable. Therefore the analysis supports robustness to removal of documented overlap only and does not completely exclude label circularity. Integrated scale.data was not used as a substitute marker set.
 
 \suppmethodsection{Discovery-threshold and clade-balance sensitivity}
 
@@ -81,7 +81,7 @@ No missing metric was converted to zero. Counts and mapping fractions in Table S
 
 \suppmethodsection{Reproducibility and data integrity}
 
-Input and output identities were recorded with SHA-256 hashes in the reproducibility repository. Supplementary Table S1 states the scope of every checksum: direct source-object hashes are reported only when available, while metadata or derived-record hashes are labelled as such.
+Input and output identities were recorded with SHA-256 hashes in the reproducibility repository. Supplementary Table S1 states the scope of every checksum: direct source-object hashes are reported only when available, while metadata or derived-record hashes are labelled as such. Table S1b supplies filenames, byte sizes and direct SHA-256 checksums for all 44 standardized H5AD objects used in discovery.
 
 Tables were checked for unique record keys, nonnegative cell and feature counts, valid fraction bounds, numerator/denominator agreement and preservation of missing values. Scanned cell counts were compared with the manifest, and all observed label strings were retained.
 

@@ -10,10 +10,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path("/workspace/projects/PhyloOpenCell")
+ROOT = Path(".")
 META = ROOT / "metadata"
 REPORTS = ROOT / "reports"
-RUN = Path("/data/runs/PhyloOpenCell/independent_program_validation_v1")
+RUN = Path("data/runs/PhyloOpenCell/independent_program_validation_v1")
 
 
 def read_tsv(path):

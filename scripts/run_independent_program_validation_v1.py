@@ -30,15 +30,15 @@ from sklearn.metrics import average_precision_score, roc_auc_score
 from sklearn.preprocessing import normalize
 
 
-PROJECT = Path("/workspace/projects/PhyloOpenCell")
+PROJECT = Path(".")
 META = PROJECT / "metadata"
 REPORTS = PROJECT / "reports"
-RUN = Path("/data/r/PhyloOpenCell")
-RUN = Path("/data/runs/PhyloOpenCell/independent_program_validation_v1")
+RUN = Path("data/r/PhyloOpenCell")
+RUN = Path("data/runs/PhyloOpenCell/independent_program_validation_v1")
 PARTIAL = RUN.with_name(RUN.name + ".partial")
-GENE_MAP = Path("/data/datasets/PhyloOpenCell/mappings/gene_mapping_candidates_v1.tsv.gz")
-OG_MAP = Path("/data/datasets/PhyloOpenCell/mappings/gene_orthogroup_candidates_v1.tsv.gz")
-ORTHOGROUPS = Path("/data/runs/PhyloOpenCell/orthofinder_full7_v1/results/Results_Sep10/Orthogroups/Orthogroups.tsv")
+GENE_MAP = Path("data/PhyloOpenCell/mappings/gene_mapping_candidates_v1.tsv.gz")
+OG_MAP = Path("data/PhyloOpenCell/mappings/gene_orthogroup_candidates_v1.tsv.gz")
+ORTHOGROUPS = Path("data/runs/PhyloOpenCell/orthofinder_full7_v1/results/Results_Sep10/Orthogroups/Orthogroups.tsv")
 ALLOWED = {"exact_candidate", "normalized_candidate", "deterministic_transform_candidate"}
 SEED = 20260911
 TOP_K = 128

@@ -7,8 +7,8 @@ suppressPackageStartupMessages({
   library(jsonlite)
 })
 
-project <- "/workspace/projects/PhyloOpenCell"
-run_dir <- "/data/runs/PhyloOpenCell/label_resolution_circularity_robustness_v1"
+project <- "."
+run_dir <- "data/runs/PhyloOpenCell/label_resolution_circularity_robustness_v1"
 partial_dir <- paste0(run_dir, ".partial")
 report_dir <- file.path(project, "reports/label_resolution_circularity_robustness_v1")
 freeze_dir <- report_dir
@@ -19,8 +19,8 @@ paths <- list(
   bridge = file.path(project, "metadata/gse268881_project_orthogroup_bridge_v1.tsv"),
   markers = file.path(project, "metadata/coarse_marker_orthogroups_v2.tsv"),
   authority_script = file.path(project, "scripts/run_gse268881_root_xylem_validation_v1.R"),
-  authority_summary = "/data/runs/PhyloOpenCell/gse268881_root_xylem_validation_v1_1/validation_summary.tsv",
-  authority_replicates = "/data/runs/PhyloOpenCell/gse268881_root_xylem_validation_v1_1/method_comparison_by_replicate.tsv",
+  authority_summary = "data/runs/PhyloOpenCell/gse268881_root_xylem_validation_v1_1/validation_summary.tsv",
+  authority_replicates = "data/runs/PhyloOpenCell/gse268881_root_xylem_validation_v1_1/method_comparison_by_replicate.tsv",
   marker_overlap = file.path(project, "reports/gse268881_esa_feasibility_v1/gse268881_author_marker_overlap_v1.tsv")
 )
 expected_hashes <- c(
@@ -34,8 +34,8 @@ expected_hashes <- c(
   marker_overlap = "63622c11403b07e0107c2a5797b34ef0dd6c96b98605c4d34c6b3dd2be732cf5"
 )
 datasets <- list(
-  esa = list(rds = "/data/datasets/PhyloOpenCell/external/GSE268881/extracted/210705_Esa_DouRe_Combined_wAnn.RDS", gene_column = "esa_gene"),
-  sir = list(rds = "/data/datasets/PhyloOpenCell/external/GSE268881/extracted/Sir/210822_Sir_DouRe_Combined_wAnn.RDS", gene_column = "sir_gene")
+  esa = list(rds = "data/PhyloOpenCell/external/GSE268881/extracted/210705_Esa_DouRe_Combined_wAnn.RDS", gene_column = "esa_gene"),
+  sir = list(rds = "data/PhyloOpenCell/external/GSE268881/extracted/Sir/210822_Sir_DouRe_Combined_wAnn.RDS", gene_column = "sir_gene")
 )
 k_values <- c(64L, 128L, 256L)
 base_seed <- 20260915L

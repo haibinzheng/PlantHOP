@@ -13,13 +13,13 @@ import scipy.sparse as sp
 from scipy.io import mmwrite
 
 
-PROJECT = Path("/workspace/projects/PhyloOpenCell")
-H5AD = Path("/data/datasets/Bioinformatics/external/PRJNA1186371_Moricandia_paper_object/m_arvensis_bbknn.h5ad")
+PROJECT = Path(".")
+H5AD = Path("data/external/PRJNA1186371_Moricandia_paper_object/m_arvensis_bbknn.h5ad")
 MAPPING = PROJECT / "metadata/external_validation_v3_moricandia_feature_orthogroup_map_v1.tsv"
 COUNT_PATHS = {
-    "0": Path("/data/datasets/Bioinformatics/external/PRJNA1186371_Moricandia/assays/rnaseq/dataset/902/902-6_GE_cellranger_count/outs/filtered_feature_bc_matrix.h5"),
-    "1": Path("/data/datasets/Bioinformatics/external/PRJNA1186371_Moricandia/assays/rnaseq/dataset/902/902-7_GE_cellranger_count/outs/filtered_feature_bc_matrix.h5"),
-    "2": Path("/data/datasets/Bioinformatics/external/PRJNA1186371_Moricandia/assays/rnaseq/dataset/902/902-8_GE_cellranger_count/outs/filtered_feature_bc_matrix.h5"),
+    "0": Path("data/external/PRJNA1186371_Moricandia/assays/rnaseq/dataset/902/902-6_GE_cellranger_count/outs/filtered_feature_bc_matrix.h5"),
+    "1": Path("data/external/PRJNA1186371_Moricandia/assays/rnaseq/dataset/902/902-7_GE_cellranger_count/outs/filtered_feature_bc_matrix.h5"),
+    "2": Path("data/external/PRJNA1186371_Moricandia/assays/rnaseq/dataset/902/902-8_GE_cellranger_count/outs/filtered_feature_bc_matrix.h5"),
 }
 TOP_K = 128
 
@@ -28,7 +28,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("mode", choices=("smoke", "formal"))
     args = parser.parse_args()
-    output_dir = Path("/data/derived/PhyloOpenCell/external_validation_v3") / f"moricandia_top128_{args.mode}"
+    output_dir = Path("data/derived/PhyloOpenCell/external_validation_v3") / f"moricandia_top128_{args.mode}"
     partial_dir = Path(str(output_dir) + ".partial")
     if output_dir.exists() or partial_dir.exists():
         raise RuntimeError("refusing to overwrite Moricandia encoding output")

@@ -1,0 +1,123 @@
+\documentclass[10pt]{article}
+
+\usepackage[a4paper,top=20mm,bottom=22mm,left=22mm,right=22mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage[font=small,labelfont=bf,justification=justified,singlelinecheck=false]{caption}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{plhopgreen}{RGB}{38,105,82}
+\definecolor{plhopgray}{RGB}{85,92,96}
+\graphicspath{{../manuscript/figures/}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4.5pt plus 1pt minus 1pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.17}
+
+\pagestyle{plain}
+\fancyhf{}
+\fancyhead[L]{\small\color{plhopgray}PlantHOP supplementary material}
+\fancyhead[R]{\small\color{plhopgray}Zheng \textit{et al.}}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\small\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+\hypersetup{
+  pdftitle={Supplementary material - Label resolution is associated with cross-species transfer of orthogroup cell programmes in plant single-cell atlases},
+  pdfauthor={Haibin Zheng, Hang Shu, Jingjing Jin, Mengxue Ma, Wenhui Feng, Yingxin Li, Zhenyang Yu, Yifan Wang},
+  pdfsubject={PlantHOP supplementary methods, figures, and machine-readable data index}
+}
+
+\begin{document}
+
+\thispagestyle{empty}
+{\color{plhopgreen}\rule{\textwidth}{1.2pt}}
+\vspace{8mm}
+
+{\Large\bfseries Supplementary material\par}
+\vspace{4mm}
+{\LARGE\bfseries Label resolution is associated with cross-species transfer of orthogroup cell programmes in plant single-cell atlases\par}
+
+\vspace{7mm}
+{\large Haibin Zheng\textsuperscript{1}, Hang Shu\textsuperscript{1}, Jingjing Jin\textsuperscript{2,*}, Mengxue Ma\textsuperscript{1}, Wenhui Feng\textsuperscript{1}, Yingxin Li\textsuperscript{1}, Zhenyang Yu\textsuperscript{1}, and Yifan Wang\textsuperscript{1}\par}
+
+\vspace{5mm}
+\textsuperscript{1}College of Computer Science and Technology (College of Software, College of Artificial Intelligence), Zhejiang University of Technology, Hangzhou 310023, China
+
+\textsuperscript{2}Beijing Life Science Academy, Beijing 102200, China
+
+\textsuperscript{*}Corresponding author: \href{mailto:jinjj@ztri.com.cn}{jinjj@ztri.com.cn}
+
+\vspace{8mm}
+{\large\bfseries Contents at a glance}
+
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}p{0.30\textwidth}X@{}}
+\toprule
+Item & Content \\
+\midrule
+Supplementary Methods S1 & Computational workflow, validation design, statistical summaries, reproducibility controls, and known gaps. \\
+Supplementary Figure S1 & Cell totals for the ten largest audited species collections. \\
+Supplementary Figure S2 & Complete mapping matrix for the frozen 18-orthogroup xylem programme. \\
+Tables S1, S1b, S2--S6 and S7a--S7d & Machine-readable TSV files supplied separately with field dictionaries and provenance notes. \\
+\bottomrule
+\end{tabularx}
+
+\vspace{6mm}
+{\large\bfseries Machine-readable supplementary tables}
+
+\small
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}p{0.16\textwidth}X@{}}
+Table S1 & Inventory of 121 audited resources and six additional validation input objects, with repository and accession records, resolved publication and download metadata, checksum scope, eligibility, and cell counts. \\
+Table S1b & Filenames, byte sizes, and direct SHA-256 checksums for the 44 standardized H5AD objects used in discovery. \\
+Table S2 & Frozen label hierarchy dictionary and governed source-label mappings covering all 3,120,007 audited cells. \\
+Table S3 & Dataset-by-panel orthogroup mapping coverage, with unavailable values retained as blank rather than zero. \\
+Table S4 & Complete Arabidopsis-derived top-18 xylem programme, member-level selection provenance, recurrence status, and available deterministic single-gene representatives. \\
+Table S5 & Pooled and replicate-level metrics, controls, paired comparisons, exclusions, and documented evidence gaps. \\
+Table S6 & Nested label-resolution, marker-overlap exclusion, and parameter-robustness results. \\
+Tables S7a--S7d & Discovery-threshold sensitivity, clade-balance eligibility, xylem-programme rediscovery, and single-gene ortholog evidence gaps. \\
+\end{tabularx}
+\normalsize
+
+\vfill
+{\small\color{plhopgray}This PDF contains narrative methods and supplementary figures. Full-resolution tables are distributed as separate tab-separated files to preserve machine readability and complete row-level evidence.\par}
+\vspace{3mm}
+{\color{plhopgreen}\rule{\textwidth}{1.2pt}\par}
+
+\clearpage
+\input{Methods_S1_detailed_methods.tex}
+
+\section*{Supplementary figures}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.94\textwidth]{supplementary_figure_s1_species_collections.pdf}
+\caption{\textbf{Largest audited species collections.} Cell totals for the ten largest species collections in the audited resource. This resource-scale view is descriptive and is not an endpoint-performance result.}
+\label{fig:supp-species-collections}
+\end{figure}
+
+\clearpage
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.96\textwidth]{supplementary_figure_s2_full_xylem_program.pdf}
+\caption{\textbf{Complete 18-orthogroup frozen xylem mapping matrix.} (A) Presence of Arabidopsis discovery members and mapped genes in Esa, Sir, and Spa for all 18 frozen orthogroups; 16 orthogroups (88.9\%) were mapped in all three validation species. (B) Conservative evidence class distinguishing annotation-available from mapping-only orthogroups. Programme-specific priority tiers are not transferred across cell programmes, and no new xylem-specific annotation review was performed. Functional annotations remain descriptive and non-causal.}
+\label{fig:supp-full-xylem}
+\end{figure}
+
+\end{document}
+

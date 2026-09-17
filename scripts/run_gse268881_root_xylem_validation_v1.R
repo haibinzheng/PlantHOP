@@ -11,7 +11,7 @@ args <- commandArgs(trailingOnly = TRUE)
 mode <- if (length(args) == 1L) args[[1L]] else ""
 if (!mode %in% c("smoke", "formal", "formal_v1_1")) stop("usage: run_gse268881_root_xylem_validation_v1.R smoke|formal|formal_v1_1")
 
-project <- "/workspace/projects/PhyloOpenCell"
+project <- "."
 protocol <- file.path(project, "reports/gse268881_root_xylem_validation_v1/gse268881_root_xylem_validation_protocol_freeze_v1.md")
 protocol_expected <- "7d93765f465e43f067679e6864cc5495b114867908e724e7a033f52c8611e2b1"
 mapping_freeze <- file.path(project, "metadata/gse268881_three_species_mapping_freeze_v1.tsv")
@@ -20,12 +20,12 @@ bridge_path <- file.path(project, "metadata/gse268881_project_orthogroup_bridge_
 candidates_path <- file.path(project, "metadata/conserved_program_candidates_v2.tsv")
 coarse_markers_path <- file.path(project, "metadata/coarse_marker_orthogroups_v2.tsv")
 run_dir <- if (mode == "formal_v1_1") {
-  "/data/runs/PhyloOpenCell/gse268881_root_xylem_validation_v1_1"
+  "data/runs/PhyloOpenCell/gse268881_root_xylem_validation_v1_1"
 } else {
-  "/data/runs/PhyloOpenCell/gse268881_root_xylem_validation_v1"
+  "data/runs/PhyloOpenCell/gse268881_root_xylem_validation_v1"
 }
 partial_dir <- paste0(run_dir, ".partial")
-smoke_dir <- "/data/runs/PhyloOpenCell/gse268881_root_xylem_validation_smoke_v1"
+smoke_dir <- "data/runs/PhyloOpenCell/gse268881_root_xylem_validation_smoke_v1"
 top_k <- 128L
 random_programs <- 500L
 random_seed <- 20260915L
@@ -185,11 +185,11 @@ run_formal <- function() {
 
   datasets <- list(
     esa = list(
-      rds = "/data/datasets/PhyloOpenCell/external/GSE268881/extracted/210705_Esa_DouRe_Combined_wAnn.RDS",
+      rds = "data/PhyloOpenCell/external/GSE268881/extracted/210705_Esa_DouRe_Combined_wAnn.RDS",
       gene_column = "esa_gene", expected_replicates = c("R1", "R2")
     ),
     sir = list(
-      rds = "/data/datasets/PhyloOpenCell/external/GSE268881/extracted/Sir/210822_Sir_DouRe_Combined_wAnn.RDS",
+      rds = "data/PhyloOpenCell/external/GSE268881/extracted/Sir/210822_Sir_DouRe_Combined_wAnn.RDS",
       gene_column = "sir_gene", expected_replicates = c("R1", "R2")
     )
   )
@@ -355,7 +355,7 @@ run_formal <- function() {
     protocol_sha256 = sha256_external(protocol),
     mapping_freeze_sha256 = sha256_external(mapping_freeze),
     bridge_sha256 = sha256_external(bridge_path),
-    supersedes_for_method_comparison = if (mode == "formal_v1_1") "/data/runs/PhyloOpenCell/gse268881_root_xylem_validation_v1" else NULL,
+    supersedes_for_method_comparison = if (mode == "formal_v1_1") "data/runs/PhyloOpenCell/gse268881_root_xylem_validation_v1" else NULL,
     top_k = top_k, random_programs = random_programs, random_seed = random_seed,
     datasets = manifests,
     safety = list(

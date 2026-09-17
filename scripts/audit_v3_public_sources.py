@@ -8,7 +8,7 @@ from pathlib import Path
 import requests
 
 
-PROJECT = Path("/workspace/projects/PhyloOpenCell")
+PROJECT = Path(".")
 REPORT = PROJECT / "reports" / "external_validation_v3_source_audit_v1"
 REPORT.mkdir(parents=True, exist_ok=False)
 

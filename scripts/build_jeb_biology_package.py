@@ -15,7 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path("/workspace/projects/PhyloOpenCell")
+ROOT = Path(".")
 META = ROOT / "metadata"
 REPORTS = ROOT / "reports"
 DOCS = ROOT / "docs"

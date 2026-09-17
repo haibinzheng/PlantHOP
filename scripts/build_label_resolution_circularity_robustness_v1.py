@@ -12,8 +12,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-PROJECT = Path("/workspace/projects/PhyloOpenCell")
-RUN = Path("/data/runs/PhyloOpenCell/label_resolution_circularity_robustness_v1")
+PROJECT = Path(".")
+RUN = Path("data/runs/PhyloOpenCell/label_resolution_circularity_robustness_v1")
 REPORT = PROJECT / "reports/label_resolution_circularity_robustness_v1"
 
 

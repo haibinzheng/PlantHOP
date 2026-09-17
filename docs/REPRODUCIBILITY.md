@@ -2,7 +2,7 @@
 
 ## Scope of the current snapshot
 
-This snapshot preserves the executed analysis scripts and the frozen compact evidence package. It is suitable for method inspection, table verification, and preparation of a fully portable release. It is not yet a single-command reproduction workflow.
+This snapshot preserves the executed analysis scripts and the compact evidence package used for submission. It supports method inspection, table verification and staged reruns after public inputs are placed locally.
 
 ## Executed software record
 
@@ -19,17 +19,15 @@ The supplementary completion step used Python 3.12.14, anndata 0.13.3.post0, Num
 | Gene/reference bridge | `phylo_open_cell_build_gene_mapping_candidates.py`, `phylo_open_cell_build_gene_protein_candidates.py` | Candidate gene mappings |
 | Orthogroups | `phylo_open_cell_prepare_orthofinder_full.py`, `phylo_open_cell_run_orthofinder.py`, `phylo_open_cell_build_orthogroup_candidates.py` | Orthogroup bridge and coverage |
 | Rank features | `build_marker_rank_features_v2.py` | Sparse rank-weighted orthogroup features |
-| Program discovery | `build_conserved_orthogroup_markers.py` | Frozen recurrent candidates |
+| Programme discovery | `build_conserved_orthogroup_markers.py` | Frozen recurrent candidates |
 | External validation | `freeze_external_validation_v3.py`, `score_external_validation_v3.py` | Frozen contrasts, metrics, and controls |
-| Label resolution | `run_label_resolution_circularity_robustness_v1.R`, `build_label_resolution_circularity_robustness_v1.py` | Nested-label and circularity checks |
+| Label resolution | `run_label_resolution_circularity_robustness_v1.R`, `build_label_resolution_circularity_robustness_v1.py` | Nested-label and marker-overlap checks |
 | Threshold robustness | `build_discovery_threshold_ortholog_robustness_v1.py` | Tables S7a-S7d |
 | Supplement build | `build_supplementary_completion_v1.py`, `build_manuscript_supplement_table_s6_v1.py`, `build_manuscript_supplement_table_s7_v1.py` | Methods S1 and Tables S1-S7 |
 
 ## Path configuration
 
-Many early scripts expose command-line path arguments. Several frozen late-stage scripts preserve the analysis-server paths used in the executed run. Before public release, these defaults will be replaced by a shared configuration layer while retaining the original paths in provenance manifests.
-
-For a different system, create a project root containing `metadata/`, `mappings/`, `features/`, `reports/`, and local data mounts, then either pass the documented command-line path options or update the frozen path constants in a working branch. Never point test runs at authoritative source objects with write permissions.
+Run scripts from the repository root. Relative paths refer to repository folders and to a local `data/` directory that is intentionally excluded from version control. Scripts with command-line path options may instead be directed to another read-only input location.
 
 ## Safety and leakage controls
 
@@ -50,10 +48,9 @@ For a different system, create a project root containing `metadata/`, `mappings/
 
 ## Release checklist
 
-Before switching this repository to public:
+Before the archival release:
 
-1. replace remaining fixed paths with a shared configuration file;
-2. add a small synthetic smoke-test fixture;
-3. run syntax and checksum validation in continuous integration;
-4. verify all source accessions and third-party licenses;
-5. tag the release and archive it with Zenodo.
+1. add a small synthetic smoke-test fixture;
+2. run syntax and checksum validation in continuous integration;
+3. verify all source accessions and third-party licenses;
+4. tag the release and archive it with Zenodo.

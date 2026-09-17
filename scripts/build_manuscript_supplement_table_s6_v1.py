@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-PROJECT = Path("/workspace/projects/PhyloOpenCell")
+PROJECT = Path(".")
 SOURCE = PROJECT / "reports/label_resolution_circularity_robustness_v1"
 OUTPUT = PROJECT / "reports/manuscript_supplement_table_s6_v1"
 FILES = {

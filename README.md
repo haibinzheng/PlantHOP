@@ -1,14 +1,14 @@
 # PlantHOP
 
-PlantHOP is a hierarchy-aware workflow for testing fixed orthogroup-level plant cell programmes across single-cell transcriptomic datasets and species. The repository accompanies the manuscript **"Label resolution is associated with cross-species transfer of conserved cell programmes in plant single-cell atlases."**
+PlantHOP is a hierarchy-aware workflow for testing fixed orthogroup-level plant cell programmes across single-cell transcriptomic datasets and species. The repository accompanies the manuscript **"Label resolution is associated with cross-species transfer of orthogroup cell programmes in plant single-cell atlases."**
 
-> Repository status: private pre-submission snapshot. The code and evidence tables are being prepared for a versioned public release. The manuscript is not yet represented here as a published article.
+> Repository status: public submission snapshot. The manuscript is not yet represented here as a published article.
 
 ## What is included
 
 - `scripts/`: executed Python, R, and JavaScript analysis scripts.
 - `metadata/`: fixed label-governance and conserved-programme records.
-- `results/supplementary/`: machine-readable Tables S1--S6 and S7a--S7d, field dictionaries and detailed methods.
+- `results/supplementary/`: machine-readable Tables S1, S1b, S2--S6 and S7a--S7d, field dictionaries and detailed methods.
 - `results/figures/`: the current manuscript and supplementary figures distributed with the reproducibility snapshot.
 - `environment/`: a portable analysis environment and the exact Linux Conda package export used for the orthogroup workflow.
 - `docs/`: data-access and reproduction guidance.
@@ -35,7 +35,7 @@ python scripts/build_marker_rank_features_v2.py --help
 python scripts/build_conserved_orthogroup_markers.py --help
 ```
 
-Several later validation scripts require local path configuration before use on another system. Supplementary tables distinguish project records from internal source records that are not publicly portable. See `docs/REPRODUCIBILITY.md` for the executed workflow, portability status and known evidence gaps.
+Run scripts from the repository root and place third-party inputs under a local `data/` directory, or override their command-line paths where available. See `docs/REPRODUCIBILITY.md` for the workflow map and known evidence gaps.
 
 ## Main analysis stages
 
@@ -54,4 +54,4 @@ Code in this repository is released under the MIT License. Third-party datasets 
 
 ## Contact
 
-For repository questions, use the GitHub issue tracker after the repository becomes public. Scientific correspondence for the manuscript should follow the corresponding-author information in the article.
+For repository questions, use the GitHub issue tracker. Scientific correspondence for the manuscript should follow the corresponding-author information in the article.

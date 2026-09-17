@@ -11,14 +11,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-PROJECT = Path("/workspace/projects/PhyloOpenCell")
+PROJECT = Path(".")
 META = PROJECT / "metadata"
 REPORTS = PROJECT / "reports"
 MORICANDIA = Path(
-    "/data/datasets/Bioinformatics/external/PRJNA1186371_Moricandia_paper_object/m_arvensis_bbknn.h5ad"
+    "data/external/PRJNA1186371_Moricandia_paper_object/m_arvensis_bbknn.h5ad"
 )
 WHEAT = Path(
-    "/data/datasets/Bioinformatics/external/GSE270342_Triticum_aestivum/GSE270342_seuratObj_for_publication.rds.gz"
+    "data/external/GSE270342_Triticum_aestivum/GSE270342_seuratObj_for_publication.rds.gz"
 )
 MORICANDIA_SHA256 = "be5f9be6570b78029fc138dd9c81ad908532776bbe665b9356b2055f554fd802"
 WHEAT_SHA256 = "7c0054b23b782e538ead563fb1cbe1688db89f185753cf5ff14ccd2cb72fd58f"

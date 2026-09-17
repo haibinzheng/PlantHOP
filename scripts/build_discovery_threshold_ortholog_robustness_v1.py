@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-PROJECT = Path("/workspace/projects/PhyloOpenCell")
+PROJECT = Path(".")
 REPORT = PROJECT / "reports/discovery_threshold_ortholog_robustness_v1"
 SUPPLEMENT = PROJECT / "reports/manuscript_supplement_tables_v1_1"
 STAGED_FREEZE = Path(__file__).with_name("discovery_threshold_ortholog_robustness_v1_freeze_protocol.md")

@@ -15,14 +15,14 @@ import scipy.sparse as sp
 from scipy.io import mmread
 
 
-PROJECT = Path("/workspace/projects/PhyloOpenCell")
+PROJECT = Path(".")
 META = PROJECT / "metadata"
 REPORTS = PROJECT / "reports"
-RUN_DIR = Path("/data/runs/PhyloOpenCell/independent_program_validation_v3")
+RUN_DIR = Path("data/runs/PhyloOpenCell/independent_program_validation_v3")
 PARTIAL_DIR = Path(str(RUN_DIR) + ".partial")
 ENCODED_DIRS = {
-    "moricandia": Path("/data/derived/PhyloOpenCell/external_validation_v3/moricandia_top128_formal"),
-    "wheat": Path("/data/derived/PhyloOpenCell/external_validation_v3/wheat_top128_formal"),
+    "moricandia": Path("data/derived/PhyloOpenCell/external_validation_v3/moricandia_top128_formal"),
+    "wheat": Path("data/derived/PhyloOpenCell/external_validation_v3/wheat_top128_formal"),
 }
 RANDOM_SEED = 20260915
 RANDOM_PROGRAMS = 500

@@ -17,10 +17,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path("/workspace/projects/PhyloOpenCell")
+ROOT = Path(".")
 META = ROOT / "metadata"
 REPORTS = ROOT / "reports"
-OF = Path("/data/runs/PhyloOpenCell/orthofinder_full7_v1/results/Results_Sep10")
+OF = Path("data/runs/PhyloOpenCell/orthofinder_full7_v1/results/Results_Sep10")
 
 
 def read_tsv(path: Path):
@@ -201,7 +201,7 @@ def main():
         "## Reason\n\n"
         "For all 19 priority orthogroups, the named multiple-sequence alignment and resolved-tree leaf membership agree with `Orthogroups.tsv`. However, the corresponding internal-ID alignment and raw FastTree tree do not map back to that orthogroup under the run's current `SequenceIDs.txt`, and the named/internal sequence multisets differ. Therefore raw branch-support values cannot be transferred to the named resolved trees, and the provenance of the existing topology is insufficient for a manuscript claim.\n\n"
         "## Required correction\n\n"
-        "Create a new, versioned tree-only analysis from the named `Orthogroup_Sequences` files for the priority families. Record exact sequence hashes, alignment hashes, tree program/version/command, branch-support method, and one-to-one leaf membership checks. Do not modify `/data/runs/PhyloOpenCell/orthofinder_full7_v1`.\n\n"
+        "Create a new, versioned tree-only analysis from the named `Orthogroup_Sequences` files for the priority families. Record exact sequence hashes, alignment hashes, tree program/version/command, branch-support method, and one-to-one leaf membership checks. Do not modify `data/runs/PhyloOpenCell/orthofinder_full7_v1`.\n\n"
         "## Manuscript consequence\n\n"
         "C6 and C7 in the JEB evidence matrix are suspended in `jeb_biology_evidence_matrix_v3.tsv`. OG0003912 remains an expression-robust PSBO-family candidate, but it is not currently a supported paralog-switching candidate.\n",
         encoding="utf-8",

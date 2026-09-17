@@ -92,8 +92,8 @@ def main() -> None:
         row.species: Path(row.local_path)
         for _, row in references[references.status.eq("downloaded_and_parsed")].iterrows()
     }
-    maize = Path("/data/datasets/PhyloOpenCell/references/ensembl_plants_release_63/Zm-B73-REFERENCE-GRAMENE-4.0_Zm00001d.1.gff3.gz")
-    catharanthus = Path("/data/datasets/PhyloOpenCell/references/uniprot/UP001060085.uniprot_gene_names.tsv.gz")
+    maize = Path("data/PhyloOpenCell/references/ensembl_plants_release_63/Zm-B73-REFERENCE-GRAMENE-4.0_Zm00001d.1.gff3.gz")
+    catharanthus = Path("data/PhyloOpenCell/references/uniprot/UP001060085.uniprot_gene_names.tsv.gz")
 
     id_sets: dict[str, set[str]] = {}
     protein_index: dict[str, dict[str, set[str]]] = {}

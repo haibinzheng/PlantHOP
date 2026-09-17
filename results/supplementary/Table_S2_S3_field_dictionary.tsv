@@ -14,9 +14,9 @@ Table_S2_source_label_mapping.tsv	parent_label	Parent panel for an accepted gove
 Table_S2_source_label_mapping.tsv	mapping_status	mapped, unknown, excluded, ambiguous, unmapped, or source_unavailable.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S2_source_label_mapping.tsv	mapping_reason	Frozen rule, exclusion, ambiguity, or gap explaining mapping status.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S2_source_label_mapping.tsv	cells_n	Cells with the dataset/source-label value.	Blank means unavailable or not applicable; never interpret as zero.
-Table_S2_source_label_mapping.tsv	source_authority	Authorities supporting the record.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S2_source_label_mapping.tsv	source_authority	Source records supporting the row.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S2_source_label_mapping.tsv	source_path	Semicolon-separated source and governance paths.	Blank means unavailable or not applicable; never interpret as zero.
-Table_S2_source_label_mapping.tsv	source_hash	Semicolon-separated authority SHA-256 values.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S2_source_label_mapping.tsv	source_hash	Semicolon-separated source-record SHA-256 values.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S2_source_label_mapping.tsv	coverage_scope	Completeness scope represented by the row.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S2_source_label_mapping.tsv	gap_flags	Explicit unresolved limitation(s).	Blank means unavailable or not applicable; never interpret as zero.
 Table_S2_label_hierarchy_dictionary.tsv	panel	Frozen root, leaf, or vascular panel; blank when no governed panel mapping exists.	Blank means unavailable or not applicable; never interpret as zero.
@@ -34,7 +34,7 @@ Table_S2_label_hierarchy_dictionary.tsv	aggregate_cells	Candidate-stage aggregat
 Table_S2_label_hierarchy_dictionary.tsv	aggregate_datasets	Candidate-stage dataset count.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S2_label_hierarchy_dictionary.tsv	aggregate_species	Candidate-stage species count.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S2_label_hierarchy_dictionary.tsv	source_path	Semicolon-separated source and governance paths.	Blank means unavailable or not applicable; never interpret as zero.
-Table_S2_label_hierarchy_dictionary.tsv	source_hash	Semicolon-separated authority SHA-256 values.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S2_label_hierarchy_dictionary.tsv	source_hash	Semicolon-separated source-record SHA-256 values.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S3_dataset_orthogroup_mapping_coverage.tsv	dataset_id	Frozen project dataset identifier.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S3_dataset_orthogroup_mapping_coverage.tsv	accession	Repository accession recorded in the dataset manifest.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S3_dataset_orthogroup_mapping_coverage.tsv	species	Governed species name.	Blank means unavailable or not applicable; never interpret as zero.
@@ -46,7 +46,7 @@ Table_S3_dataset_orthogroup_mapping_coverage.tsv	gene_mapped_features	Features m
 Table_S3_dataset_orthogroup_mapping_coverage.tsv	mapped_features	Features assigned to candidate orthogroups.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S3_dataset_orthogroup_mapping_coverage.tsv	mapping_fraction	Authority orthogroup-assigned features divided by total features.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S3_dataset_orthogroup_mapping_coverage.tsv	mapping_fraction_recomputed	Independently recomputed mapped_features/total_features.	Blank means unavailable or not applicable; never interpret as zero.
-Table_S3_dataset_orthogroup_mapping_coverage.tsv	fraction_absolute_difference	Absolute authority-versus-recomputed fraction difference.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S3_dataset_orthogroup_mapping_coverage.tsv	fraction_absolute_difference	Absolute recorded-versus-recomputed fraction difference.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S3_dataset_orthogroup_mapping_coverage.tsv	reference_version	Reference-protein selection version.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S3_dataset_orthogroup_mapping_coverage.tsv	bridge_version	Gene and orthogroup bridge versions.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S3_dataset_orthogroup_mapping_coverage.tsv	discovery_eligibility	Frozen dataset-panel inclusion status.	Blank means unavailable or not applicable; never interpret as zero.
@@ -57,6 +57,6 @@ Table_S3_dataset_orthogroup_mapping_coverage.tsv	expression_dtype	Recorded expre
 Table_S3_dataset_orthogroup_mapping_coverage.tsv	source_h5ad_path	Read-only source H5AD path.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S3_dataset_orthogroup_mapping_coverage.tsv	source_annotation_path	Original annotation source path recorded in the manifest.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S3_dataset_orthogroup_mapping_coverage.tsv	source_annotation_sha256	SHA-256 of the original annotation source.	Blank means unavailable or not applicable; never interpret as zero.
-Table_S3_dataset_orthogroup_mapping_coverage.tsv	mapping_source_path	Mapping authority paths.	Blank means unavailable or not applicable; never interpret as zero.
-Table_S3_dataset_orthogroup_mapping_coverage.tsv	mapping_source_sha256	Mapping authority SHA-256 values.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S3_dataset_orthogroup_mapping_coverage.tsv	mapping_source_path	Repository-relative mapping record filenames.	Blank means unavailable or not applicable; never interpret as zero.
+Table_S3_dataset_orthogroup_mapping_coverage.tsv	mapping_source_sha256	Mapping-record SHA-256 values.	Blank means unavailable or not applicable; never interpret as zero.
 Table_S3_dataset_orthogroup_mapping_coverage.tsv	missing_value_reason	Reason mapped counts/fraction remain blank.	Blank means unavailable or not applicable; never interpret as zero.

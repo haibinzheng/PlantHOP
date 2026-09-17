@@ -17,7 +17,7 @@ import anndata as ad
 import pandas as pd
 
 
-PROJECT = Path("/workspace/projects/PhyloOpenCell")
+PROJECT = Path(".")
 META = PROJECT / "metadata"
 REPORTS = PROJECT / "reports"
 FINAL_OUTPUT = REPORTS / "supplementary_completion_v1"
@@ -37,7 +37,7 @@ SOURCES = {
     "orthogroup_coverage": META / "dataset_orthogroup_coverage_v1.tsv",
     "gene_mapping_audit": REPORTS / "gene_mapping_candidate_audit.json",
     "orthofinder_audit": REPORTS / "orthofinder_full7_v1_audit.json",
-    "marker_rank_dataset_audit": Path("/data/runs/PhyloOpenCell/marker_rank_features_v2/dataset_feature_audit.tsv"),
+    "marker_rank_dataset_audit": Path("data/runs/PhyloOpenCell/marker_rank_features_v2/dataset_feature_audit.tsv"),
     "discovery_audit": REPORTS / "conserved_program_candidates_v2_audit.json",
     "p0_audit": REPORTS / "label_resolution_circularity_robustness_v1/audit.json",
     "p1_audit": REPORTS / "discovery_threshold_ortholog_robustness_v1/audit.json",

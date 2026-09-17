@@ -11,11 +11,11 @@ args <- commandArgs(trailingOnly = TRUE)
 mode <- if (length(args) >= 1L) args[[1]] else "smoke"
 if (!mode %in% c("smoke", "formal")) stop("mode must be smoke or formal")
 
-project <- "/workspace/projects/PhyloOpenCell"
-source_rds <- "/data/datasets/Bioinformatics/external/GSE270342_Triticum_aestivum/GSE270342_seuratObj_for_publication.rds.gz"
+project <- "."
+source_rds <- "data/external/GSE270342_Triticum_aestivum/GSE270342_seuratObj_for_publication.rds.gz"
 mapping_path <- file.path(project, "metadata", "external_validation_v3_wheat_feature_orthogroup_map_v1.tsv")
 addendum_path <- file.path(project, "reports", "external_validation_v3_execution_addendum_v1.json")
-output_dir <- file.path("/data/derived/PhyloOpenCell/external_validation_v3", paste0("wheat_top128_", mode))
+output_dir <- file.path("data/derived/PhyloOpenCell/external_validation_v3", paste0("wheat_top128_", mode))
 partial_dir <- paste0(output_dir, ".partial")
 top_k <- 128L
 

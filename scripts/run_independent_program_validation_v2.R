@@ -8,14 +8,14 @@ suppressPackageStartupMessages({
   library(jsonlite)
 })
 
-project <- "/workspace/projects/PhyloOpenCell"
+project <- "."
 meta_dir <- file.path(project, "metadata")
 report_dir <- file.path(project, "reports")
-source_rds <- "/data/datasets/Bioinformatics/external/GSE232863/GSE232863_scRNA_omics.Rds"
-orthogroups_path <- "/data/runs/PhyloOpenCell/orthofinder_full7_v1/results/Results_Sep10/Orthogroups/Orthogroups.tsv"
-run_dir <- "/data/runs/PhyloOpenCell/independent_program_validation_v2"
+source_rds <- "data/external/GSE232863/GSE232863_scRNA_omics.Rds"
+orthogroups_path <- "data/runs/PhyloOpenCell/orthofinder_full7_v1/results/Results_Sep10/Orthogroups/Orthogroups.tsv"
+run_dir <- "data/runs/PhyloOpenCell/independent_program_validation_v2"
 partial_dir <- paste0(run_dir, ".partial")
-derived_dir <- "/data/derived/PhyloOpenCell/external_validation_v2"
+derived_dir <- "data/derived/PhyloOpenCell/external_validation_v2"
 top_k <- 128L
 random_sets <- 500L
 seed <- 20260914L

@@ -11,15 +11,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-PROJECT = Path("/workspace/projects/PhyloOpenCell")
+PROJECT = Path(".")
 META = PROJECT / "metadata"
 REPORTS = PROJECT / "reports"
 AUDIT_DIR = REPORTS / "gse232863_structure_audit_v1"
 ORTHOGROUPS = Path(
-    "/data/runs/PhyloOpenCell/orthofinder_full7_v1/results/Results_Sep10/Orthogroups/Orthogroups.tsv"
+    "data/runs/PhyloOpenCell/orthofinder_full7_v1/results/Results_Sep10/Orthogroups/Orthogroups.tsv"
 )
 SOURCE_RDS = Path(
-    "/data/datasets/Bioinformatics/external/GSE232863/GSE232863_scRNA_omics.Rds"
+    "data/external/GSE232863/GSE232863_scRNA_omics.Rds"
 )
 SOURCE_SHA256 = "7a308241e07575770f227057b1cd716b4cb9c255200c4ff4189c567bc2fbc958"
 EXPECTED_BYTES = 5_521_719_712

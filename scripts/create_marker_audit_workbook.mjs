@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { SpreadsheetFile, Workbook } from "@oai/artifact-tool";
 
-const base = "C:/Users/haibinzheng/Desktop/202405-开放课题-北京院/生物信息论文/实验报告/PhyloOpenCell";
+const base = ".";
 const output = path.join(base, "PhyloOpenCell_conserved_program_candidates_v2.xlsx");
 const previewDir = path.join(base, "workbook_previews_v2");
 await fs.mkdir(previewDir, { recursive: true });
@@ -255,12 +255,12 @@ const methodRows = [
   ["Representation check", "All 145,089 sampled cells have nonzero v2 features across 14 panel × species combinations."],
   ["V1 correction", "V2 includes deterministic_transform_candidate mappings; v1 remains unchanged as audit history."],
   ["Safety", "Source H5AD files were read-only; no model training was run in this audit."],
-  ["Source", "/data/runs/PhyloOpenCell/marker_rank_features_v2/dataset_feature_audit.tsv"],
-  ["Source", "/data/datasets/PhyloOpenCell/mappings/gene_mapping_candidates_v1.tsv.gz"],
-  ["Source", "/workspace/projects/PhyloOpenCell/metadata/coarse_label_hierarchy_v1.tsv"],
-  ["Audit JSON", "/workspace/projects/PhyloOpenCell/reports/conserved_program_candidates_v2_audit.json"],
-  ["Function evidence", "/workspace/projects/PhyloOpenCell/metadata/conserved_program_function_evidence_v2.tsv"],
-  ["Paralog evidence", "/workspace/projects/PhyloOpenCell/metadata/priority_paralog_gene_tree_evidence_v2.tsv"],
+  ["Source", "data/runs/PhyloOpenCell/marker_rank_features_v2/dataset_feature_audit.tsv"],
+  ["Source", "data/PhyloOpenCell/mappings/gene_mapping_candidates_v1.tsv.gz"],
+  ["Source", "./metadata/coarse_label_hierarchy_v1.tsv"],
+  ["Audit JSON", "./reports/conserved_program_candidates_v2_audit.json"],
+  ["Function evidence", "./metadata/conserved_program_function_evidence_v2.tsv"],
+  ["Paralog evidence", "./metadata/priority_paralog_gene_tree_evidence_v2.tsv"],
   ["Interpretation limit", "Orthogroup recurrence is candidate evidence only. It does not establish conserved function, causality or gene-level paralog substitution."],
 ];
 methods.getRangeByIndexes(4, 0, methodRows.length, 2).values = methodRows;

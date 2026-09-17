@@ -18,12 +18,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-PROJECT = Path("/workspace/projects/PhyloOpenCell")
-SOURCE = Path("/data/runs/PhyloOpenCell/orthofinder_full7_v1/results/Results_Sep10/Orthogroup_Sequences")
-RUN_ROOT = Path("/data/runs/PhyloOpenCell/priority_gene_trees_v2")
+PROJECT = Path(".")
+SOURCE = Path("data/runs/PhyloOpenCell/orthofinder_full7_v1/results/Results_Sep10/Orthogroup_Sequences")
+RUN_ROOT = Path("data/runs/PhyloOpenCell/priority_gene_trees_v2")
 PARTIAL = RUN_ROOT.with_name(RUN_ROOT.name + ".partial")
-MAFFT = Path("/workspace/venvs/phyloopencell/bin/mafft")
-IQTREE = Path("/workspace/venvs/phyloopencell/bin/iqtree3")
+MAFFT = Path("mafft")
+IQTREE = Path("iqtree3")
 SEED = 20260911
 
 

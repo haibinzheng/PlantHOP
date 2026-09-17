@@ -7,8 +7,8 @@ suppressPackageStartupMessages({
   library(jsonlite)
 })
 
-project <- "/workspace/projects/PhyloOpenCell"
-output_dir <- "/data/runs/PhyloOpenCell/gse268881_root_xylem_uncertainty_v1"
+project <- "."
+output_dir <- "data/runs/PhyloOpenCell/gse268881_root_xylem_uncertainty_v1"
 partial_dir <- paste0(output_dir, ".partial")
 plan_path <- file.path(project, "reports/gse268881_root_xylem_validation_v1/gse268881_uncertainty_analysis_plan_v1.md")
 mapping_path <- file.path(project, "metadata/gse268881_three_species_mapping_freeze_v1.tsv")
@@ -121,8 +121,8 @@ target_candidates <- coarse[
 if (length(target_candidates) != 18L) stop("target definition changed")
 
 datasets <- list(
-  esa = list(rds = "/data/datasets/PhyloOpenCell/external/GSE268881/extracted/210705_Esa_DouRe_Combined_wAnn.RDS", gene_column = "esa_gene"),
-  sir = list(rds = "/data/datasets/PhyloOpenCell/external/GSE268881/extracted/Sir/210822_Sir_DouRe_Combined_wAnn.RDS", gene_column = "sir_gene")
+  esa = list(rds = "data/PhyloOpenCell/external/GSE268881/extracted/210705_Esa_DouRe_Combined_wAnn.RDS", gene_column = "esa_gene"),
+  sir = list(rds = "data/PhyloOpenCell/external/GSE268881/extracted/Sir/210822_Sir_DouRe_Combined_wAnn.RDS", gene_column = "sir_gene")
 )
 all_intervals <- list(); replicate_points <- list(); set.seed(bootstrap_seed)
 

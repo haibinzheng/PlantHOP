@@ -20,11 +20,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path("/workspace/projects/PhyloOpenCell")
+ROOT = Path(".")
 META = ROOT / "metadata"
 REPORTS = ROOT / "reports"
-TREE_ROOT = Path("/data/runs/PhyloOpenCell/priority_gene_trees_v2")
-ORTHOGROUPS = Path("/data/runs/PhyloOpenCell/orthofinder_full7_v1/results/Results_Sep10/Orthogroups/Orthogroups.tsv")
+TREE_ROOT = Path("data/runs/PhyloOpenCell/priority_gene_trees_v2")
+ORTHOGROUPS = Path("data/runs/PhyloOpenCell/orthofinder_full7_v1/results/Results_Sep10/Orthogroups/Orthogroups.tsv")
 
 
 @dataclass(eq=False)

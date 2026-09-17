@@ -28,7 +28,7 @@ Table_S1	vascular_reason	text	Vascular reason.		Blank means unavailable/not appl
 Table_S1	vascular_candidate_label_count	text	Vascular candidate label count.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S1	vascular_labels_ge_100_cells	text	Vascular labels ge 100 cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S1	vascular_candidate_cells	text	Vascular candidate cells.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
-Table_S1	source_path	text	Absolute authoritative source path(s), semicolon-delimited when multiple.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S1	source_path	text	Repository-relative provenance record(s), semicolon-delimited when multiple.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S1	source_sha256	text	SHA256 digest(s) corresponding positionally to source_path.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S1	provenance_version	text	Provenance record version used for the submitted evidence table.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S1	direct_source_object_path	text	Absolute path to the individual source object when present in frozen evidence.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
@@ -51,7 +51,7 @@ Table_S4	function_descriptions	text	Function descriptions.		Blank means unavaila
 Table_S4	annotation_member_genes	text	Annotation member genes.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S4	annotation_sources	text	Annotation sources.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S4	annotation_scope	text	Annotation scope.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
-Table_S4	source_path	text	Absolute authoritative source path(s), semicolon-delimited when multiple.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S4	source_path	text	Repository-relative provenance record(s), semicolon-delimited when multiple.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S4	source_sha256	text	SHA256 digest(s) corresponding positionally to source_path.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S4	provenance_version	text	Provenance record version used for the submitted evidence table.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S4	gap_flags	text	Semicolon-delimited evidence gaps; blank means no table-specific gap was detected.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
@@ -98,7 +98,7 @@ Table_S5	random_auc_median	numeric	Random auc median.		Blank means unavailable/n
 Table_S5	random_auc_q95	numeric	Random auc q95.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	exclusion_reason	text	Frozen reason an endpoint was excluded before scoring.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	note	text	Note.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
-Table_S5	source_path	text	Absolute authoritative source path(s), semicolon-delimited when multiple.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
+Table_S5	source_path	text	Repository-relative provenance record(s), semicolon-delimited when multiple.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	source_sha256	text	SHA256 digest(s) corresponding positionally to source_path.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	provenance_version	text	Provenance record version used for the submitted evidence table.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
 Table_S5	gap_flags	text	Semicolon-delimited evidence gaps; blank means no table-specific gap was detected.		Blank means unavailable/not applicable; consult gap_flags. Never interpret blank as zero.
@@ -120,3 +120,8 @@ Table_S4	freeze_protocol_sha256	text	SHA-256 of the pre-score GSE268881 protocol
 Table_S4	rediscovered_top100_min3	text	Whether the member also met the distinct top-100/minimum-three-species recurrence rule.		Blank means unavailable; consult gap_flags.
 Table_S4	discovery_species_count_top100	text	Number of discovery species placing the member in their xylem top 100.		Blank means unavailable; consult gap_flags.
 Table_S4	discovery_species_top100	text	Discovery species placing the member in their xylem top 100.		Blank means unavailable; consult gap_flags.
+Table_S1b	dataset_id	text	Identifier matching Table S1.		Required.
+Table_S1b	standardized_object_filename	text	Basename of the standardized H5AD object used in discovery.		Required.
+Table_S1b	object_size_bytes	numeric	Exact standardized-object size.	bytes	Required.
+Table_S1b	direct_source_object_sha256	text	SHA-256 calculated directly from the standardized H5AD object.		Required.
+Table_S1b	checksum_scope	text	Scope of the checksum.	standardized_h5ad_object	Required.
