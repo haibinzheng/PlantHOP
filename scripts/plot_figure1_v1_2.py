@@ -90,8 +90,8 @@ panel_w = (PAGE_W - 2 * margin - gap) / 2
 x1, x2 = margin, margin + panel_w + gap
 y_top, y_bottom = PAGE_H - 35, 246
 
-# A: resource audit
-title(c, x1, y_top, "A", "Resource audit")
+# A: resource overview
+title(c, x1, y_top, "A", "Resource overview")
 text(c, x1, y_top - 20, f"121 readable H5AD  |  {total:,} cells  |  33 species", 7.8)
 bar_y, bar_h, bar_w = y_top - 82, 32, panel_w
 lab_w = bar_w * labeled / total
@@ -106,12 +106,12 @@ for frac, lab in [(0, "0"), (0.5, "1.56 M"), (1, "3.12 M")]:
     xx = x1 + frac * panel_w
     c.line(xx, bar_y - 12, xx, bar_y - 8)
     text(c, xx, bar_y - 23, lab, 6.7, anchor="middle")
-text(c, x1 + panel_w / 2, bar_y - 37, "Audited cells", 7.4, anchor="middle")
+text(c, x1 + panel_w / 2, bar_y - 37, "Reviewed cells", 7.4, anchor="middle")
 
-# B: governed hierarchy
-title(c, x2, y_top, "B", "Governed label hierarchy")
+# B: harmonized hierarchy
+title(c, x2, y_top, "B", "Harmonized label hierarchy")
 text(c, x2, y_top - 20, "Tissue panel", 7.2, True)
-text(c, x2 + 105, y_top - 20, "Governed cell systems", 7.2, True)
+text(c, x2 + 105, y_top - 20, "Harmonized cell systems", 7.2, True)
 hierarchy = [
     ("Leaf", "photosynthetic / ground  |  epidermal", C["blue"]),
     ("Root", "epidermal  |  ground  |  root cap  |  stele", C["green"]),
@@ -125,8 +125,8 @@ for i, (panel, systems, color) in enumerate(hierarchy):
     rounded_box(c, x2 + 98, yy, panel_w - 98, 26, C["pale"], color)
     text(c, x2 + 98 + (panel_w - 98) / 2, yy + 9, systems, 6.5, False, C["text"], "middle")
 
-# C: recurrent program counts
-title(c, x1, y_bottom, "C", "Recurrent program candidates (n = 102)")
+# C: recurrent programme counts
+title(c, x1, y_bottom, "C", "Recurrent programme candidates (n = 102)")
 items = [
     ("Photosynthetic / ground [leaf]", 30, C["blue"]),
     ("Epidermal [leaf]", 9, C["blue"]),
@@ -152,12 +152,12 @@ text(c, x1 + label_w + max_bar / 2, start_y - 7 * row_h - 31, "Candidate orthogr
 text(c, x1, 30, "Top 100 positive differences per species-class; recurrence in >=3 species", 6.2)
 
 # D: analysis sequence
-title(c, x2, y_bottom, "D", "Discovery, freeze and independent validation")
+title(c, x2, y_bottom, "D", "Discovery and independent validation")
 steps = [
-    ("Governed discovery", "audit | hierarchy | orthogroups", C["navy"]),
-    ("Pre-score freeze", "datasets | labels | programs | thresholds", C["gold"]),
+    ("Programme discovery", "dataset review | hierarchy | orthogroups", C["navy"]),
+    ("Prespecified design", "datasets | labels | programmes | thresholds", C["gold"]),
     ("Independent tests", "rice | Moricandia | wheat", C["green"]),
-    ("Pre-specified held-out xylem", "validation | Esa | Sir; Spa excluded", C["purple"]),
+    ("Held-out xylem test", "Esa | Sir; Spa excluded", C["purple"]),
 ]
 box_x, box_w, box_h = x2 + 15, panel_w - 30, 34
 for i, (head, detail, color) in enumerate(steps):
